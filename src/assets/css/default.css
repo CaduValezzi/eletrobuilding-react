@@ -1,0 +1,61 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html body a {
+  text-decoration: none;
+  color: #000;
+}
+html body .text-gold {
+  color: #ffd700;
+}
+html body .text-black {
+  color: #000;
+}
+html body .text-li-grey {
+  color: #a7a9aa;
+}
+html body .text-white {
+  color: #fff;
+}
+html body .text-500 {
+  font-size: 10vh;
+}
+html body .bg-black {
+  background-color: #000;
+}
+html body .bg-grey {
+  background-color: #f8f9fa;
+}
+html body .bg-grey-2 {
+  background-color: #a7a9aa;
+}
+html body .bg-white {
+  background-color: #fff;
+}
+html body .height-50 {
+  height: 50vh;
+}
+html body .text-500 {
+  font-size: 10vh;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4 {
+  font-weight: bold;
+}
+html body .menu {
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  transition: 1s;
+  box-shadow: none;
+}
+html body .shadow {
+  box-shadow: 2px 2px 2px 2px #a7a9aa;
+  z-index: 3;
+}
+
+/*# sourceMappingURL=default.css.map */
