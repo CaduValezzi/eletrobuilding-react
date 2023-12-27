@@ -2,6 +2,8 @@ import React from "react";
 import Styled from "styled-components"
 import { Link } from "react-router-dom";
 
+import { AnimatedMenu } from "../components/animated_menu"
+
 // img
 import Carousel1 from "../assets/img/png-jpeg/4334.jpg"
 import Carousel2 from "../assets/img/png-jpeg/electricity.jpg"
@@ -21,38 +23,41 @@ const CarouselImg = Styled.img`
 //     position: fixed;
 // `
 
-function About() {
+export const About = () => {
 
     return (
-        
         <>
+            <AnimatedMenu />
             <main className="container-fluid p-0 m-0 z-n1" id="main">
                 <div id="carouselExampleCaptions" class="carousel slide">
                     <div className="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1">
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2">
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3">
+                        </button>
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <CarouselImg src={Carousel1} className="d-block w-100" alt="..." />
                             <div className="position-absolute top-50 carousel-caption d-none d-md-block">
-                                <h5>Energia Solar</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
+                                {/* <h5>Energia Solar</h5>
+                                <p>Some representative placeholder content for the first slide.</p> */}
                             </div>
                         </div>
                         <div className="carousel-item ">
                             <CarouselImg src={Carousel2} className="d-block w-100" alt="..." />
                             <div className="text-black position-absolute top-50 carousel-caption d-none d-md-block">
-                                <h5>Engenharia Eletríca</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
+                                {/* <h5>Engenharia Eletríca</h5>
+                                <p>Some representative placeholder content for the second slide.</p> */}
                             </div>
                         </div>
                         <div className="carousel-item">
                             <CarouselImg src={Carousel3} className="d-block w-100" alt="..." />
                             <div className="position-absolute top-50 carousel-caption d-none d-md-block">
-                                <h5>Consultoria</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
+                                {/* <h5>Consultoria</h5>
+                                <p>Some representative placeholder content for the third slide.</p> */}
                             </div>
                         </div>
                     </div>
@@ -69,18 +74,17 @@ function About() {
 
             <section className="container">
                 <div className="row row-cols-2 pt-5">
-
-                    <div className="col-12 col-md-3 my-5">
+                    <div className="col-12 col-md-3 my-5 left-menu">
                         <section className="section-menu">
                             <h2>Seções</h2>
                             <ul className="list-group my-4">
-                                <li className="list-group-item">
+                                <li className="">
                                     <a href="#about">Sobre Nós</a>
                                 </li>
-                                <li className="list-group-item">
+                                <li className="">
                                     <a href="#bussineshour">Entrevista Busines Hour</a>
                                 </li>
-                                <li className="list-group-item">
+                                <li className="">
                                     <a href="#services">Serviços</a>
                                 </li>
                             </ul>
@@ -149,4 +153,3 @@ function About() {
     );
 }
 
-export default About

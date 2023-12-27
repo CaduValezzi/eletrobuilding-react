@@ -15,10 +15,11 @@ html {
     scroll-behavior: smooth;
 
     body {
-        a{
+        a {
             text-decoration: none;
             color: #000;
         }
+
         .text-gold {
             color: $color-gold;
         }
@@ -76,9 +77,25 @@ html {
             transition: 1s;
             box-shadow: none;
         }
-        .shadow{
+
+        .shadow {
             box-shadow: 2px 2px 2px 2px $color-light-grey2;
             z-index: 3;
+        }
+
+        .left-menu {
+            border-right: 2px solid $color-light-grey;
+            .section-menu {       
+                ul {
+                    list-style: none;
+
+                    li {
+                        margin-right: 1rem;
+                        line-height: 4rem;
+                        border-bottom: 1px solid #000;
+                    }
+                }
+            }
         }
 
     }
