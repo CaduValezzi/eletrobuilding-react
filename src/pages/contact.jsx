@@ -45,7 +45,7 @@ export const Contact = () => {
     return (
         <>
             <AnimatedMenu />
-            <main className="container my-4 bg-white" id="formtalktous">
+            <main className="container my-4" id="formtalktous">
                 <section className="container p-5">
                     <h1 className="display-8 w-75 mb-4">Fale Conosco</h1>
                     <form onSubmit={enviar} ref={form} className="row row-cols-2" id="contact-form">

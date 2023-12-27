@@ -5,6 +5,7 @@ import "./assets/css/default.css"
 // pages 
 import { About }  from "./pages/about"
 import { Contact }  from "./pages/contact";
+import { NotFound } from "./pages/notfound"
 // components
 
 
@@ -21,6 +22,9 @@ function App() {
         <Route path="/contact" element={
           <Contact />
         } />
+        <Route path="*" element={
+          <NotFound/>
+        }/>
       </Routes>
     </Router>
   );
