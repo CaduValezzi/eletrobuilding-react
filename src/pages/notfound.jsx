@@ -5,7 +5,7 @@ import Styled from "styled-components";
 import { AnimatedMenu } from '../components/animated_menu'
 
 const Img404 = Styled.img`
-    height: 100vh ;
+    max-height: 100vh ;
 `
 export const NotFound = () => {
     return (
