@@ -1,3 +1,15 @@
+:root {
+  --font-body: "Montserrat", "sans-serif";
+  --color-gold: #ffd700;
+  --color-dark-grey: #464646;
+  --color-light-grey: #f8f9fa;
+  --color-light-grey-2: #eceeee;
+  --color-grey: #a7a9aa;
+  --color-black: #000;
+  --color-white: #fff;
+  --color: #0000002d;
+}
+
 html {
   padding: 0;
   margin: 0;
@@ -6,67 +18,48 @@ html {
 }
 html body a {
   text-decoration: none;
-  color: #000;
+  color: var(--color-black);
 }
 html body .text-gold {
-  color: #ffd700;
+  color: var(--color-gold);
 }
 html body .text-black {
-  color: #000;
+  color: var(--color-black);
 }
 html body .text-li-grey {
-  color: #a7a9aa;
+  color: var(--color-grey);
 }
 html body .text-white {
-  color: #fff;
+  color: var(--color-white);
 }
 html body .text-500 {
   font-size: 10vh;
 }
 html body .bg-black {
-  background-color: #000;
+  background-color: var(--color-black);
 }
 html body .bg-grey {
-  background-color: #f8f9fa;
+  background-color: var(--color-light-grey);
 }
 html body .bg-grey-2 {
-  background-color: #a7a9aa;
+  background-color: var(--color-grey);
 }
 html body .bg-white {
-  background-color: #fff;
-}
-html body .height-50 {
-  height: 50vh;
-}
-html body .text-500 {
-  font-size: 10vh;
+  background-color: var(--color-white);
 }
 html body h1,
 html body h2,
 html body h3,
-html body h4 {
+html body h4,
+html body h5 {
   font-weight: bold;
 }
-html body .menu {
-  background-color: transparent;
-  backdrop-filter: blur(10px);
-  transition: 1s;
-  box-shadow: none;
-}
 html body .shadow {
-  box-shadow: 2px 2px 2px 2px #a7a9aa;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1764705882);
   z-index: 3;
 }
 html body .left-menu {
-  border-right: 2px solid #f8f9fa;
-}
-html body .left-menu .section-menu ul {
-  list-style: none;
-}
-html body .left-menu .section-menu ul li {
-  margin-right: 1rem;
-  line-height: 4rem;
-  border-bottom: 1px solid #000;
+  border-right: 2px solid var(--color-light-grey-2);
 }
 
 /*# sourceMappingURL=default.css.map */

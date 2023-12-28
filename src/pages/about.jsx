@@ -1,33 +1,34 @@
 import React from "react";
-import Styled from "styled-components"
 import { Link } from "react-router-dom";
+import styled from "styled-components"
 
-import { AnimatedMenu } from "../components/animated_menu"
 
-// img
+import { SectionMenuAbout } from "../components/about/section_menu";
+// import { SectionMenuGeneric } from "../components/generic/section_menu";
+
 import Carousel1 from "../assets/img/png-jpeg/4334.jpg"
 import Carousel2 from "../assets/img/png-jpeg/electricity.jpg"
 import Carousel3 from "../assets/img/png-jpeg/70.jpg"
 
 
-const InterviewVideo = Styled.iframe`
+const InterviewVideo = styled.iframe`
     width: 100%;
-    height: 72vh;
-    border: 10px solid #ffd700;
+    height: 50vh;
+    border: 5px solid #ffd700;
     border-radius: 10px;
+    
 `
-const CarouselImg = Styled.img`
+const CarouselImg = styled.img`
     max-height: 100vh;
 `
-// const SectionMenu = Styled.section`
-//     position: fixed;
-// `
+const AboutContent = styled.section`
+    
+`
 
 export const About = () => {
 
     return (
         <>
-            <AnimatedMenu />
             <main className="container-fluid p-0 m-0 z-n1" id="main">
                 <div id="carouselExampleCaptions" class="carousel slide">
                     <div className="carousel-indicators">
@@ -42,22 +43,22 @@ export const About = () => {
                         <div className="carousel-item active">
                             <CarouselImg src={Carousel1} className="d-block w-100" alt="..." />
                             <div className="position-absolute top-50 carousel-caption d-none d-md-block">
-                                {/* <h5>Energia Solar</h5>
-                                <p>Some representative placeholder content for the first slide.</p> */}
+                                <h1 className="text-black">Enérgia Solar</h1>
+                                <Link className="fw-bold" to="/solarenergy">Clique aqui</Link>
                             </div>
                         </div>
                         <div className="carousel-item ">
                             <CarouselImg src={Carousel2} className="d-block w-100" alt="..." />
-                            <div className="text-black position-absolute top-50 carousel-caption d-none d-md-block">
-                                {/* <h5>Engenharia Eletríca</h5>
-                                <p>Some representative placeholder content for the second slide.</p> */}
+                            <div className="position-absolute top-50 carousel-caption d-none d-md-block">
+                                <h1 className="text-black">Engenharia Elétrica</h1>
+                                <Link className="fw-bold" to="/eletricengineering">Clique aqui</Link>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <CarouselImg src={Carousel3} className="d-block w-100" alt="..." />
                             <div className="position-absolute top-50 carousel-caption d-none d-md-block">
-                                {/* <h5>Consultoria</h5>
-                                <p>Some representative placeholder content for the third slide.</p> */}
+                                <h1 className="text-black">Segurança Eletrônica</h1>
+                                <Link className="fw-bold" to="/eletricsecurity">Clique aqui</Link>
                             </div>
                         </div>
                     </div>
@@ -72,33 +73,21 @@ export const About = () => {
                 </div>
             </main>
 
-            <section className="container">
+            <AboutContent className="container">
                 <div className="row row-cols-2 pt-5">
-                    <div className="col-12 col-md-3 my-5 left-menu">
-                        <section className="section-menu">
-                            <h2>Seções</h2>
-                            <ul className="list-group my-4">
-                                <li className="">
-                                    <a href="#about">Sobre Nós</a>
-                                </li>
-                                <li className="">
-                                    <a href="#bussineshour">Entrevista Busines Hour</a>
-                                </li>
-                                <li className="">
-                                    <a href="#services">Serviços</a>
-                                </li>
-                            </ul>
-                        </section>
+                    <div className="col-12 col-md-3 my-5 left-menu pe-md-5">
+                        <SectionMenuAbout />
+                        {/* <SectionMenuGeneric/> */}
                     </div>
 
 
-                    <div className="col-12 col-md-9">
+                    <div className="col-12 col-md-9 ps-md-5">
                         <section className="section-content">
                             <div className="row row-cols-2">
                                 <div className="col-12 pt-5" id="about">
-                                    <h1 className="display-8 w-75 text-center mx-auto mb-5">
+                                    <h2 className="text-center mx-auto mb-5">
                                         Sobre Nós
-                                    </h1>
+                                    </h2>
                                     <p className="mb-4">
                                         A <strong className="text-gold">ELETRO BUILDING</strong> atua nos setores Industrial, Comercial e
                                         Residencial,
@@ -112,7 +101,7 @@ export const About = () => {
                                 </div>
 
                                 <div className="col-12 pt-5" id="bussineshour">
-                                    <h2 className="display-8 w-75 text-center mx-auto my-4">
+                                    <h2 className=" text-center mx-auto my-4">
                                         Entrevista BUSINESS HOUR
                                     </h2>
                                     <InterviewVideo className="my-4 img-fluid" src="https://www.youtube.com/embed/CDCIa-uGbrM?si=Q6dS7qknEJzY6zbl" title="Entrevista no BUSINESS HOUR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></InterviewVideo>
@@ -121,7 +110,7 @@ export const About = () => {
                         </section>
 
 
-                        <section className="container bg-grey rounded-1" id="services">
+                        {/* <section className="container bg-grey rounded-1" id="services">
                             <div className="row row-cols-2 justify-content-evenly ">
                                 <div className="col-12">
                                     <h2 className="display-8 w-75 text-center mx-auto my-4">
@@ -144,10 +133,14 @@ export const About = () => {
                                     </h3>
                                 </div>
                             </div>
+                        </section> */}
+
+                        <section className="container bg-grey rounded-1">
+
                         </section>
                     </div>
                 </div>
-            </section>
+            </AboutContent>
 
         </>
     );

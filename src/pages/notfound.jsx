@@ -10,8 +10,6 @@ const Img404 = Styled.img`
 export const NotFound = () => {
     return (
         <>
-            <AnimatedMenu />
-
             <main className="container my-4 text-center">
                 <Img404 className="col-12 img-fluid" src={Image404} alt="" />
             </main>

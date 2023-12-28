@@ -1,12 +1,15 @@
 import React from "react";
 import Styled from 'styled-components'
 import { Link } from 'react-router-dom';
-// img 
+
 import Logo from "../assets/img/png-jpeg/logo/EB-dark.png"
 
 
 const Header = Styled.header`
-    box-shadow: 3px 3px 7px #0000002d;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: none;
+    transition: 1s;
     font-size: 1.2rem;
     font-weight: 600;
 `
@@ -113,7 +116,7 @@ export function AnimatedMenu() {
                                     <Link className="nav-link" to="/blog">Blog</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/contact">Fale conosco</Link>
+                                    <Link className="nav-link" to="/contact">Contato</Link>
                                 </li>
                             </ul>
                             <ul className="navbar-nav ms-auto">
@@ -124,8 +127,11 @@ export function AnimatedMenu() {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link to="https://www.instagram.com/eletro.building" target="_blank" className="nav-link">
-                                        <ButtonInsta className="btn text-white"><i class="bi bi-instagram "></i> Instagram
+                                    <Link to="https://www.instagram.com/eletro.building" 
+                                    target="_blank" 
+                                    className="nav-link">
+                                        <ButtonInsta className="btn text-white"><i class="bi bi-instagram "></i> 
+                                        {/* Instagram */}
                                         </ButtonInsta>
                                     </Link>
                                 </li>
