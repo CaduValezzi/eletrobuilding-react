@@ -44,6 +44,10 @@ export const FooterMenu = () => {
                                 target="blank"><i class="bi bi-instagram "></i> Instagram</Link>
                                 </ColunmItens>
                                 <ColunmItens><Link 
+                                to="https://www.linkedin.com/company/eletro-building/about/" 
+                                target="blank"><i class="bi bi-linkedin"></i> Linkedin</Link>
+                                </ColunmItens>
+                                <ColunmItens><Link 
                                 to="https://wa.me/+551149914110" 
                                 target="blank"><i className="bi bi-whatsapp"></i> Whatsapp</Link>
                                 </ColunmItens>
