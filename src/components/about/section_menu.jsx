@@ -23,9 +23,9 @@ export const SectionMenuAbout = () => {
                     <ColunmItens className="">
                         <a href="#director">Sobre o Diretor</a>
                     </ColunmItens>
-                    <ColunmItens className="">
+                    {/* <ColunmItens className="">
                         <a href="#services">Parceiros e Clientes</a>
-                    </ColunmItens>
+                    </ColunmItens> */}
                 </Colunm>
             </section>
         </>
