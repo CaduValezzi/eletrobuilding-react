@@ -55,7 +55,7 @@ export const Contact = () => {
                         {/* <SectionMenuGeneric /> */}
                     </div>
                     <div className="col-12 col-md-9 ps-md-5">
-                        <main className="my-4" id="formtalktous">
+                        <main className="container my-4" id="formtalktous">
                             <section className="container p-5">
                                 <h2 className="display-8 w-75 mb-4">Fale Conosco</h2>
                                 <form onSubmit={enviar} ref={form} className="row row-cols-2" id="contact-form">

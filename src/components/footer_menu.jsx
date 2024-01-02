@@ -33,23 +33,26 @@ export const FooterMenu = () => {
                             <Colunm className="list-group">
                                 <ColunmItens><Link to="/" >Sobre Nós</Link></ColunmItens>
                             </Colunm>
-                            
+                            <Colunm className="list-group">
+                                <ColunmItens><Link to="/blog" >Blog</Link></ColunmItens>
+                            </Colunm>
+
                         </div>
 
                         <div className="col mb-4">
                             <h5 className="mb-4">Redes Sociais</h5>
                             <Colunm className="list-group">
-                                <ColunmItens><Link 
-                                to="https://www.instagram.com/eletro.building" 
-                                target="blank"><i class="bi bi-instagram "></i> Instagram</Link>
+                                <ColunmItens><Link
+                                    to="https://www.instagram.com/eletro.building"
+                                    target="blank"><i class="bi bi-instagram "></i> Instagram</Link>
                                 </ColunmItens>
-                                <ColunmItens><Link 
-                                to="https://www.linkedin.com/company/eletro-building/about/" 
-                                target="blank"><i class="bi bi-linkedin"></i> Linkedin</Link>
+                                <ColunmItens><Link
+                                    to="https://www.linkedin.com/company/eletro-building/about/"
+                                    target="blank"><i class="bi bi-linkedin"></i> Linkedin</Link>
                                 </ColunmItens>
-                                <ColunmItens><Link 
-                                to="https://wa.me/+551149914110" 
-                                target="blank"><i className="bi bi-whatsapp"></i> Whatsapp</Link>
+                                <ColunmItens><Link
+                                    to="https://wa.me/+551149914110"
+                                    target="blank"><i className="bi bi-whatsapp"></i> Whatsapp</Link>
                                 </ColunmItens>
                             </Colunm>
                         </div>
@@ -58,17 +61,17 @@ export const FooterMenu = () => {
                         <div className="col mb-4">
                             <h5 className="mb-4">Fale Conosco</h5>
                             <Colunm className="list-group">
-                                <ColunmItens><a href="mailto:contato@eletrobuilding.com.br"></a><i class="bi bi-envelope"></i> contato@eletrobuilding.com.br</ColunmItens>
+                                <ColunmItens><a className="fs-6" href="mailto:contato@eletrobuilding.com.br">contato@eletrobuilding.com.br</a></ColunmItens>
                                 <ColunmItens><a href="tel:1149914110"><i class="bi bi-telephone-fill"></i> (11) 4991-4110</a></ColunmItens>
-                               
+
                             </Colunm>
                         </div>
                         <div className="col mb-4">
                             <h5 className="mb-4">Conheça Também</h5>
                             <Colunm className="list-group">
                                 <ColunmItens><Link to="/solarenergy">Enérgia Solar</Link></ColunmItens>
-                                <ColunmItens><Link to="/solarenergy">Engenharia Elétrica</Link></ColunmItens>
-                                <ColunmItens><Link to="/solarenergy">Segurança Eletrônica</Link></ColunmItens>
+                                <ColunmItens><Link to="/eletricengineering">Engenharia Elétrica</Link></ColunmItens>
+                                <ColunmItens><Link to="/eletronicsecurity">Segurança Eletrônica</Link></ColunmItens>
                             </Colunm>
                         </div>
 

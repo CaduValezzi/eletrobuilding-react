@@ -99,7 +99,7 @@ export function AnimatedMenu() {
                                         aria-expanded="false">Serviços</Link>
                                     <ul className="dropdown-menu">
                                         <li>
-                                            <Link className="dropdown-item" to="/electricenergy">Engenharia Elétrica</Link>
+                                            <Link className="dropdown-item" to="/eletricengineering">Engenharia Elétrica</Link>
                                         </li>
                                         <hr className="dropdown-divider" />
                                         <li>
@@ -107,7 +107,7 @@ export function AnimatedMenu() {
                                         </li>
                                         <hr className="dropdown-divider" />
                                         <li>
-                                            <Link className="dropdown-item" to="/electronicsecurity">Segurança Eletrônica</Link>
+                                            <Link className="dropdown-item" to="/eletronicsecurity">Segurança Eletrônica</Link>
                                         </li>
                                     </ul>
 

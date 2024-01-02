@@ -21,7 +21,7 @@ export const SectionMenuAbout = () => {
                         <a href="#about">Sobre Nós</a>
                     </ColunmItens>
                     <ColunmItens className="">
-                        <a href="#bussineshour">Entrevista Busines Hour</a>
+                        <a href="#director">Sobre o Diretor</a>
                     </ColunmItens>
                     <ColunmItens className="">
                         <a href="#services">Parceiros e Clientes</a>

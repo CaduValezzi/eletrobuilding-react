@@ -2,26 +2,28 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components"
 
-
 import { SectionMenuAbout } from "../components/about/section_menu";
-// import { SectionMenuGeneric } from "../components/generic/section_menu";
 
 import Carousel1 from "../assets/img/png-jpeg/4334.jpg"
 import Carousel2 from "../assets/img/png-jpeg/electricity.jpg"
-import Carousel3 from "../assets/img/png-jpeg/70.jpg"
+import Carousel3 from "../assets/img/png-jpeg/2328.jpg"
+
+import AlexImg from "../assets/img/png-jpeg/Alex_Valezzi.jpg"
 
 
-const InterviewVideo = styled.iframe`
-    width: 100%;
-    height: 50vh;
-    border: 5px solid #ffd700;
-    border-radius: 10px;
-    
-`
 const CarouselImg = styled.img`
     max-height: 100vh;
 `
 const AboutContent = styled.section`
+    
+`
+const Pages = styled.div`
+    text-shadow: 0px 0 3px  var(--color-black);
+    color: var(--color-white);
+    /* -webkit-text-stroke: 2px var(--color-black); */
+    a {
+        color: var(--color-white)
+    }
     
 `
 
@@ -43,22 +45,28 @@ export const About = () => {
                         <div className="carousel-item active">
                             <CarouselImg src={Carousel1} className="d-block w-100" alt="..." />
                             <div className="position-absolute top-50 carousel-caption d-none d-md-block">
-                                <h1 className="text-black">Enérgia Solar</h1>
-                                <Link className="fw-bold" to="/solarenergy">Clique aqui</Link>
+                                <Pages >
+                                    <h1 className="display-3 fw-bold">Enérgia Solar</h1>
+                                    <Link className="fw-bold" to="/solarenergy">Clique aqui</Link>
+                                </Pages>
                             </div>
                         </div>
                         <div className="carousel-item ">
                             <CarouselImg src={Carousel2} className="d-block w-100" alt="..." />
                             <div className="position-absolute top-50 carousel-caption d-none d-md-block">
-                                <h1 className="text-black">Engenharia Elétrica</h1>
-                                <Link className="fw-bold" to="/eletricengineering">Clique aqui</Link>
+                                <Pages>
+                                    <h1 className="display-3 fw-bold">Engenharia Elétrica</h1>
+                                    <Link className="fw-bold" to="/eletricengineering">Clique aqui</Link>
+                                </Pages>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <CarouselImg src={Carousel3} className="d-block w-100" alt="..." />
                             <div className="position-absolute top-50 carousel-caption d-none d-md-block">
-                                <h1 className="text-black">Segurança Eletrônica</h1>
-                                <Link className="fw-bold" to="/eletricsecurity">Clique aqui</Link>
+                                <Pages>
+                                    <h1 className="display-3 fw-bold">Segurança Eletrônica</h1>
+                                    <Link className="fw-bold" to="/eletronicsecurity">Clique aqui</Link>
+                                </Pages>
                             </div>
                         </div>
                     </div>
@@ -82,32 +90,48 @@ export const About = () => {
 
 
                     <div className="col-12 col-md-9 ps-md-5">
-                        <section className="section-content">
-                            <div className="row row-cols-2">
-                                <div className="col-12 pt-5" id="about">
-                                    <h2 className="text-center mx-auto mb-5">
-                                        Sobre Nós
-                                    </h2>
-                                    <p className="mb-4">
-                                        A <strong className="text-gold">ELETRO BUILDING</strong> atua nos setores Industrial, Comercial e
-                                        Residencial,
-                                        oferecendo soluções técnicas para manutenção e otimização de processos, seguindo
-                                        rigorosamente normas vigentes.
-                                    </p>
-                                    <p className="mb-4">
-                                        Com uma equipe especializada, a empresa busca a excelência, identificando melhorias em processos
-                                        produtivos e administrativos, garantindo a satisfação dos clientes.
-                                    </p>
-                                </div>
+                        <section className="container">
+                            <div className="col-12 pt-5" id="about">
+                                <h2 className=" mx-auto mb-5">
+                                    Sobre Nós
+                                </h2>
+                                <p className="mb-4">
+                                    A <strong className="text-gold">ELETRO BUILDING</strong> atua nos setores Industrial, Comercial e
+                                    Residencial,
+                                    oferecendo soluções técnicas para manutenção e otimização de processos, seguindo
+                                    rigorosamente normas vigentes.
+                                </p>
+                                <p className="mb-4">
+                                    Com uma equipe especializada, a empresa busca a excelência, identificando melhorias em processos
+                                    produtivos e administrativos, garantindo a satisfação dos clientes.
+                                </p>
+                            </div>
+                        </section>
 
-                                <div className="col-12 pt-5" id="bussineshour">
-                                    <h2 className=" text-center mx-auto my-4">
-                                        Entrevista BUSINESS HOUR
-                                    </h2>
-                                    <InterviewVideo className="my-4 img-fluid" src="https://www.youtube.com/embed/CDCIa-uGbrM?si=Q6dS7qknEJzY6zbl" title="Entrevista no BUSINESS HOUR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></InterviewVideo>
+                        <section className="container" id="director">
+                            <div className="col-12 pt-5">
+                                <h2 className=" mb-5">
+                                    Sobre Alex Valezzi
+                                </h2>
+                                <div className="row row-cols-2">
+                                    <img className="col-6 my-auto" src={AlexImg} alt="" />
+                                    <p className="col-6">
+                                        Empresário proprietário da empresa Eletro Building Comércio e Serviços Ltda, atuando na grande parte dos negócios em Energia Solar, Instalações Elétricas e Segurança Eletrônica, graduado em Engenharia Industrial Elétrica pela Unisanta e Engenharia de Segurança do Trabalho pela FAAP, é especialista em Sistemas Elétricos, com grande conhecimento em Sistemas de Abastecimento, Utilidades, Automação e Telecomunicação, tem mais de quarenta anos de experiência na área, sendo trinta e cinco anos trabalhados em empresa multinacional do setor Automobilístico, e os demais anos em empresas do setor Plástico.
+                                    </p>
+                                    <p className="col-12">
+                                        É Green Belt em Seis Sigma, implementou melhoria contínua (Kaizen / PMC) e gerenciamento em Segurança do Trabalho em muitos processos produtivos e administrativos, trazendo excelentes resultados. Também prestou serviços em empresas de vários outros setores, ministrou cursos normativos como NR10, e técnicos como SAP e Eletricidade, inclusive no SENAI.</p>
                                 </div>
                             </div>
                         </section>
+
+                        {/* <section className="container">
+                            <div className="col-12 pt-5" id="bussineshour">
+                                <h2 className=" mx-auto my-4">
+                                    Entrevista BUSINESS HOUR
+                                </h2>
+                                <InterviewVideo className="my-4 img-fluid" src="https://www.youtube.com/embed/CDCIa-uGbrM?si=Q6dS7qknEJzY6zbl" title="Entrevista no BUSINESS HOUR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></InterviewVideo>
+                            </div>
+                        </section> */}
 
 
                         {/* <section className="container bg-grey rounded-1" id="services">
