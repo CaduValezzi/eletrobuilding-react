@@ -8,7 +8,8 @@ import { SectionMenuContact } from "../components/contact/section_menu";
 
 const Maps = styled.iframe`
     width:100%;
-    height:50vh;    
+    height:50vh;  
+     
 `
 
 export const Contact = () => {
