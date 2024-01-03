@@ -69,7 +69,7 @@ export const FooterMenu = () => {
                         <div className="col mb-4">
                             <h5 className="mb-4">Conheça Também</h5>
                             <Colunm className="list-group">
-                                <ColunmItens><Link to="/solarenergy">Enérgia Solar</Link></ColunmItens>
+                                <ColunmItens><Link to="/solarenergy">Energia Solar</Link></ColunmItens>
                                 <ColunmItens><Link to="/eletricengineering">Engenharia Elétrica</Link></ColunmItens>
                                 <ColunmItens><Link to="/eletronicsecurity">Segurança Eletrônica</Link></ColunmItens>
                             </Colunm>

@@ -19,31 +19,24 @@ export const Contact = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault();
+        if (Name.value === '' || Email.value === '' || Message.value === '') {
+            alert("Um ou mais campos em branco.\nPreencha todos os campos para mandar uma menssagem.")
+        }
+        else {
+            alert("Sucesso! Sua Mensagem foi enviada.")
 
-        emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-    };
-
-    const enviar = () => {
-        try {
-            if (Name.value === '' || Email.value === '' || Message.value === '') {
-                alert("Um ou mais campos em branco.\nPreencha todos os campos para mandar uma menssagem.")
-            }
-            else {
-                alert("Sucesso! Sua Mensagem foi enviada.")
-                sendEmail()
-            }
-        } catch (error) {
-            console.log("Erro ao enviar formulário: " + error)
-
+            e.preventDefault();
+            emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
         }
 
-    }
+    };
+
+    
 
 
     return (
@@ -58,7 +51,7 @@ export const Contact = () => {
                         <main className="container my-4" id="formtalktous">
                             <section className="container p-5">
                                 <h2 className="display-8 w-75 mb-4">Fale Conosco</h2>
-                                <form onSubmit={enviar} ref={form} className="row row-cols-2" id="contact-form">
+                                <form onSubmit={sendEmail} ref={form} className="row row-cols-2" id="contact-form">
                                     <input type="hidden" name="contact_number" />
                                     <div className="col-12 col-md-6">
                                         <div className="mb-3">

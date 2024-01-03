@@ -46,7 +46,7 @@ export const About = () => {
                             <CarouselImg src={Carousel1} className="d-block w-100" alt="..." />
                             <div className="position-absolute top-50 carousel-caption d-none d-md-block">
                                 <Pages >
-                                    <h1 className="display-3 fw-bold">Enérgia Solar</h1>
+                                    <h1 className="display-3 fw-bold">Energia Solar</h1>
                                     <Link className="fw-bold" to="/solarenergy">Clique aqui</Link>
                                 </Pages>
                             </div>

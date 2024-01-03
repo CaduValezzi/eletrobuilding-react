@@ -36,8 +36,8 @@ export const Blog = () => {
                     </h2>
                     <p className="mb-4">
 
-                        Alex Valezzi iniciou sua carreira no ramo plástico e fez um curso de eletricista de manutenção no SENAI.
-                        Após trabalhar em uma empresa multinacional há 35 anos, ocupando o cargos de Supervisor e Eengenheiro de Manutenção Especialista, Alex decidiu se aposentar e abrir sua própria empresa, a Eletro Building.
+                        Alex Valezzi iniciou sua carreira no ramo plástico, e fez um curso de eletricista de manutenção no SENAI.
+                        Após trabalhar em uma empresa multinacional por 35 anos, ocupando os cargos de Supervisor e Engenheiro de Manutenção Especialista, Alex decidiu se aposentar e abrir sua própria empresa, a Eletro Building.
 
                     </p>
                     <p className="mb-4">
@@ -88,7 +88,7 @@ export const Blog = () => {
 
                         Alex enfatiza a importância da segurança e qualidade na instalação de sistemas de energia solar.
                         Ele possui parceria com a Intelbras, uma empresa com mais de 45 anos de experiência no mercado nacional.
-                        Além disso, a EletrBuilding garante o funcionamento dos sistemas de energia solar por 25 anos e oferece manutenção especializada.</p>
+                        Além disso, a Eletro Building garante o funcionamento dos sistemas de energia solar por 25 anos e oferece manutenção especializada.</p>
                     <h2 className="mb-4">
 
                         Conclusão</h2>
