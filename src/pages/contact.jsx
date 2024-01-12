@@ -23,22 +23,15 @@ export const Contact = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
 
-        if (name.value == '' || email.value == '' || message.value == '' || numberPhone.value == '') {
-            alert("Um ou mais campos em branco.\nPreencha todos os campos para mandar uma menssagem.")
-        }
-        else {
-            alert("Sucesso! Sua Mensagem foi enviada.")
-            
-            e.preventDefault();
-            emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
-                .then((result) => {
-                    console.log(result.text);
-                }, (error) => {
-                    console.log(error.text);
-                });
 
-        }
 
     };
 
