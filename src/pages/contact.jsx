@@ -16,19 +16,19 @@ const Maps = styled.iframe`
 
 export const Contact = () => {
 
-    const Name = document.getElementById("from_name");
-    const Email = document.getElementById("reply_to");
-    const Message = document.getElementById("message");
+    const name = document.getElementById("from_name");
+    const email = document.getElementById("reply_to");
+    const message = document.getElementById("message");
     const numberPhone = document.getElementById("phone");
     const form = useRef();
 
     const sendEmail = (e) => {
-        if (Name.value === '' || Email.value === '' || Message.value === '' || numberPhone.value === '') {
+
+        if (name.value == '' || email.value == '' || message.value == '' || numberPhone.value == '') {
             alert("Um ou mais campos em branco.\nPreencha todos os campos para mandar uma menssagem.")
         }
         else {
             alert("Sucesso! Sua Mensagem foi enviada.")
-
             e.preventDefault();
             emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
                 .then((result) => {
@@ -36,6 +36,7 @@ export const Contact = () => {
                 }, (error) => {
                     console.log(error.text);
                 });
+
         }
 
     };
@@ -49,7 +50,6 @@ export const Contact = () => {
                 <div className="row row-cols-2 pt-5">
                     <div className="col-12 col-md-3 my-5 left-menu pe-md-5">
                         <SectionMenuContact />
-                        {/* <SectionMenuGeneric /> */}
                     </div>
                     <div className="col-12 col-md-9 ps-md-5">
                         <main className="container my-4" id="formtalktous">
@@ -65,7 +65,7 @@ export const Contact = () => {
                                                 className="form-control"
                                                 id="from_name"
                                                 name="from_name"
-                                                    placeholder="Exemplo: Fulano da Silva (nome fictício)" />
+                                                placeholder="Exemplo: Fulano da Silva (nome fictício)" />
                                         </div>
                                         <div className="mb-3">
                                             <label for="reply_to" className="form-label">Email</label>
@@ -78,7 +78,7 @@ export const Contact = () => {
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu e-mail com mais ninguém.</div>
                                         </div>
                                         <div className="mb-3">
-                                            <label for="phone" className="form-label">Email</label>
+                                            <label for="phone" className="form-label">WhatsApp</label>
                                             <input type="tel"
                                                 className="form-control"
                                                 id="phone"
