@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 import { SectionMenuContact } from "../components/contact/section_menu";
 // import { SectionMenuGeneric } from "../components/generic/section_menu";
@@ -17,10 +19,11 @@ export const Contact = () => {
     const Name = document.getElementById("from_name");
     const Email = document.getElementById("reply_to");
     const Message = document.getElementById("message");
+    const numberPhone = document.getElementById("phone");
     const form = useRef();
 
     const sendEmail = (e) => {
-        if (Name.value === '' || Email.value === '' || Message.value === '') {
+        if (Name.value === '' || Email.value === '' || Message.value === '' || numberPhone.value === '') {
             alert("Um ou mais campos em branco.\nPreencha todos os campos para mandar uma menssagem.")
         }
         else {
@@ -37,7 +40,7 @@ export const Contact = () => {
 
     };
 
-    
+
 
 
     return (
@@ -54,24 +57,41 @@ export const Contact = () => {
                                 <h2 className="display-8 w-75 mb-4">Fale Conosco</h2>
                                 <form onSubmit={sendEmail} ref={form} className="row row-cols-2" id="contact-form">
                                     <input type="hidden" name="contact_number" />
-                                    <div className="col-12 col-md-6">
+                                    <div className="col-12">
                                         <div className="mb-3">
                                             <label for="from_name" className="form-label">Nome</label>
-                                            <input type="text" className="form-control" id="from_name" name="from_name"
-                                                placeholder="Exemplo: Fulano da Silva (nome fictício)" />
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="from_name"
+                                                name="from_name"
+                                                    placeholder="Exemplo: Fulano da Silva (nome fictício)" />
                                         </div>
                                         <div className="mb-3">
                                             <label for="reply_to" className="form-label">Email</label>
-                                            <input type="email" className="form-control" id="reply_to" name="reply_to"
-                                                aria-describedby="emailHelp" placeholder="Exemplo: fulano.silva@email.com (email fictício)" />
+                                            <input
+                                                type="email"
+                                                className="form-control"
+                                                id="reply_to" name="reply_to"
+                                                aria-describedby="emailHelp"
+                                                placeholder="Exemplo: fulano.silva@email.com (email fictício)" />
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu e-mail com mais ninguém.</div>
                                         </div>
+                                        <div className="mb-3">
+                                            <label for="phone" className="form-label">Email</label>
+                                            <input type="tel"
+                                                className="form-control"
+                                                id="phone"
+                                                name="phone"
+                                                aria-describedby="tel" placeholder="Exemplo: 1149914110" />
+                                            <div id="emailHelp" className="form-text"> Nunca compartilharemos seu whatsapp com mais ninguém.</div>
+                                        </div>
                                     </div>
-                                    <div className="col-12 col-md-6">
+                                    <div className="col-12">
                                         <div className="mb-3">
                                             <label for="message" className="form-label">Mensagem</label>
                                             <textarea className="form-control" id="message" rows="5" name="message"
-                                                placeholder="Deixe aqui sua mensagem" maxlength="300"></textarea>
+                                                placeholder="Deixe aqui sua mensagem" maxlength="500"></textarea>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
