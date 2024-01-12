@@ -44,11 +44,11 @@ export const FooterMenu = () => {
                             <Colunm className="list-group">
                                 <ColunmItens><Link
                                     to="https://www.instagram.com/eletro.building"
-                                    target="blank"><i class="bi bi-instagram "></i> Instagram</Link>
+                                    target="blank"><i className="bi bi-instagram "></i> Instagram</Link>
                                 </ColunmItens>
                                 <ColunmItens><Link
                                     to="https://www.linkedin.com/company/eletro-building/about/"
-                                    target="blank"><i class="bi bi-linkedin"></i> Linkedin</Link>
+                                    target="blank"><i className="bi bi-linkedin"></i> Linkedin</Link>
                                 </ColunmItens>
                                 <ColunmItens><Link
                                     to="https://wa.me/+551149914110"
@@ -62,7 +62,7 @@ export const FooterMenu = () => {
                             <h5 className="mb-4">Fale Conosco</h5>
                             <Colunm className="list-group">
                                 <ColunmItens><a className="fs-6" href="mailto:contato@eletrobuilding.com.br">contato@eletrobuilding.com.br</a></ColunmItens>
-                                <ColunmItens><a href="tel:1149914110"><i class="bi bi-telephone-fill"></i> (11) 4991-4110</a></ColunmItens>
+                                <ColunmItens><a href="tel:1149914110"><i className="bi bi-telephone-fill"></i> (11) 4991-4110</a></ColunmItens>
 
                             </Colunm>
                         </div>

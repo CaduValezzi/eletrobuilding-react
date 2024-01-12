@@ -32,7 +32,7 @@ export const About = () => {
     return (
         <>
             <main className="container-fluid p-0 m-0 z-n1" id="main">
-                <div id="carouselExampleCaptions" class="carousel slide">
+                <div id="carouselExampleCaptions" className="carousel slide">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1">
                         </button>
@@ -129,7 +129,7 @@ export const About = () => {
                                 <h2 className=" mx-auto my-4">
                                     Entrevista BUSINESS HOUR
                                 </h2>
-                                <InterviewVideo className="my-4 img-fluid" src="https://www.youtube.com/embed/CDCIa-uGbrM?si=Q6dS7qknEJzY6zbl" title="Entrevista no BUSINESS HOUR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></InterviewVideo>
+                                <InterviewVideo className="my-4 img-fluid" src="https://www.youtube.com/embed/CDCIa-uGbrM?si=Q6dS7qknEJzY6zbl" title="Entrevista no BUSINESS HOUR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></InterviewVideo>
                             </div>
                         </section> */}
 

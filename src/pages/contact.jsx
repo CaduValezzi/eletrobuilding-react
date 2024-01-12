@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from '@emailjs/browser';
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 
 import { SectionMenuContact } from "../components/contact/section_menu";
@@ -29,6 +29,7 @@ export const Contact = () => {
         }
         else {
             alert("Sucesso! Sua Mensagem foi enviada.")
+            
             e.preventDefault();
             emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
                 .then((result) => {
@@ -59,7 +60,7 @@ export const Contact = () => {
                                     <input type="hidden" name="contact_number" />
                                     <div className="col-12">
                                         <div className="mb-3">
-                                            <label for="from_name" className="form-label">Nome</label>
+                                            <label htmlFor="from_name" className="form-label">Nome</label>
                                             <input
                                                 type="text"
                                                 className="form-control"
@@ -68,7 +69,7 @@ export const Contact = () => {
                                                 placeholder="Exemplo: Fulano da Silva (nome fictício)" />
                                         </div>
                                         <div className="mb-3">
-                                            <label for="reply_to" className="form-label">Email</label>
+                                            <label htmlFor="reply_to" className="form-label">Email</label>
                                             <input
                                                 type="email"
                                                 className="form-control"
@@ -78,7 +79,7 @@ export const Contact = () => {
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu e-mail com mais ninguém.</div>
                                         </div>
                                         <div className="mb-3">
-                                            <label for="phone" className="form-label">WhatsApp</label>
+                                            <label htmlFor="phone" className="form-label">WhatsApp</label>
                                             <input type="tel"
                                                 className="form-control"
                                                 id="phone"
@@ -89,9 +90,9 @@ export const Contact = () => {
                                     </div>
                                     <div className="col-12">
                                         <div className="mb-3">
-                                            <label for="message" className="form-label">Mensagem</label>
+                                            <label htmlFor="message" className="form-label">Mensagem</label>
                                             <textarea className="form-control" id="message" rows="5" name="message"
-                                                placeholder="Deixe aqui sua mensagem" maxlength="500"></textarea>
+                                                placeholder="Deixe aqui sua mensagem" maxLength="500"></textarea>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
@@ -111,9 +112,9 @@ export const Contact = () => {
                                 <h3 className="display-8 w-75 mb-4">Onde Estamos?</h3>
                                 <div className="text-center">
                                     <Maps src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14619.997647624885!2d-46.5427378!3d-23.6401921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce438d5b3062af%3A0x923f01d7b7d98273!2sEletro%20Building!5e0!3m2!1spt-BR!2sbr!4v1694616774078!5m2!1spt-BR!2sbr"
-                                        allowfullscreen=""
+                                        allowFullScreen=""
                                         loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade"></Maps>
+                                        referrerPolicy="no-referrer-when-downgrade"></Maps>
                                 </div>
 
                             </div>

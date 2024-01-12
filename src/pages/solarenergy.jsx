@@ -79,7 +79,7 @@ export const SolarEnergy = () => {
                                     src="https://www.youtube.com/embed/WP8Fxj1SNDQ?si=Dh9JzsPkkSIlKyW0&amp;controls=0&amp;start=9"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></Video>
+                                    allowFullScreen></Video>
                             </div>
                             <div className="col-12">
                                 <h4 className=" mt-4 mx-auto">
@@ -89,7 +89,7 @@ export const SolarEnergy = () => {
                                     src="https://www.youtube.com/embed/TQnsCfIvfbw?si=VH5m0HsWMEsxak1W&amp;controls=0"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></Video>
+                                    allowFullScreen></Video>
                             </div>
                         </div>
                     </section>

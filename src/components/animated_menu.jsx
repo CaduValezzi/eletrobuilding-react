@@ -130,7 +130,7 @@ export function AnimatedMenu() {
                                     <Link to="https://www.instagram.com/eletro.building" 
                                     target="_blank" 
                                     className="nav-link">
-                                        <ButtonInsta className="btn text-white"><i class="bi bi-instagram "></i> 
+                                        <ButtonInsta className="btn text-white"><i className="bi bi-instagram "></i> 
                                         {/* Instagram */}
                                         </ButtonInsta>
                                     </Link>

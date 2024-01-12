@@ -15,7 +15,7 @@ export const Blog = () => {
                         Transformando energia solar em sucesso financeiro
                     </h1>
                     <div className="d-flex justify-content-center mb-4">
-                        <Video title="Bussines Hour" src="https://www.youtube.com/embed/CDCIa-uGbrM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen">
+                        <Video title="Bussines Hour" src="https://www.youtube.com/embed/CDCIa-uGbrM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen="allowFullScreen">
                         </Video>
                     </div>
                     <h2 className="mb-4">
