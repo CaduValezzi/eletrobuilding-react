@@ -2,7 +2,7 @@ import React from "react";
 
 import { SectionMenuEE } from "../components/eletricengineering/section_menu";
 
-import EletricEngineer from "../assets/img/png-jpeg/electrical-engineer-using-digital-multimeter-to-check-current-voltage-at-circuit-breaker-in-main-distribution-board.jpg"
+import EletricEngineer from "../assets/img/pages/eletricengineering/high-voltage-transformer-and-fire-control-system-at-power-plant.jpg"
 
 export const EletricEngineering = () => {
     return (

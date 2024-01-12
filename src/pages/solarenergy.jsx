@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 
-import MainImg from "../assets/img/png-jpeg/29.jpg"
-import SolarPanel from "../assets/img/png-jpeg/pexels-tom-fisk-9893729.jpg"
+import MainImg from "../assets/img/pages/solarenergy/29.jpg"
+import SolarPanel from "../assets/img/pages/solarenergy/pexels-tom-fisk-9893729.jpg"
 
 import { SectionMenuSolar } from "../components/solarenergy/section_menu"
 

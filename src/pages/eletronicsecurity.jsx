@@ -3,19 +3,19 @@ import React from "react";
 import { SectionMenuES } from "../components/eletronicsecurity/section_menu";
 
 import MainImage from "../assets/img/png-jpeg/3772.jpg"
-import FacialRecognition from "../assets/img/png-jpeg/reconhecimento-facial-bloco.jpg"
-import CamBanners from "../assets/img/png-jpeg/card-mini-banner-cameras-hdcvi.jpg"
-import Intercom from "../assets/img/png-jpeg/intelbras_interfonia_sub-empresarial_590x360_1.jpg"
-import Alarms from "../assets/img/png-jpeg/intelbras_alarmes_sub-central_590x360_0.jpg"
-import Locks from "../assets/img/png-jpeg/intelbras_seguranca_segmento_sub-fechaduras_590x360_0.jpg"
-import Dvr from "../assets/img/png-jpeg/card-mini-banner-dvr-gravador-digital-de-video.bak.png"
+import FacialRecognition from "../assets/img/pages/eletronicsecurity/reconhecimento-facial-bloco.jpg"
+import CamBanners from "../assets/img/pages/eletronicsecurity/card-mini-banner-cameras-hdcvi.jpg"
+import Intercom from "../assets/img/pages/eletronicsecurity/intelbras_interfonia_sub-empresarial_590x360_1.jpg"
+import Alarms from "../assets/img/pages/eletronicsecurity/intelbras_alarmes_sub-central_590x360_0.jpg"
+import Locks from "../assets/img/pages/eletronicsecurity/intelbras_seguranca_segmento_sub-fechaduras_590x360_0.jpg"
+import Dvr from "../assets/img/pages/eletronicsecurity/card-mini-banner-dvr-gravador-digital-de-video.bak.png"
 
 export const EletronicSecurity = () => {
     return (
         <div className="container">
             <div className="row row-cols-2 pt-5">
                 <div className="col-12 col-md-3 my-5 left-menu pe-md-5">
-                    <SectionMenuES/>
+                    <SectionMenuES />
                 </div>
                 <div className="col-12 col-md-9 ps-md-5">
                     {/* conteudo aqui */}

@@ -4,11 +4,11 @@ import styled from "styled-components"
 
 import { SectionMenuAbout } from "../components/about/section_menu";
 
-import Carousel1 from "../assets/img/png-jpeg/4334.jpg"
-import Carousel2 from "../assets/img/png-jpeg/electricity.jpg"
-import Carousel3 from "../assets/img/png-jpeg/2328.jpg"
+import Carousel1 from "../assets/img/pages/about/4334.jpg"
+import Carousel2 from "../assets/img/pages/about/electricity.jpg"
+import Carousel3 from "../assets/img/pages/about/2329.jpg"
 
-import AlexImg from "../assets/img/png-jpeg/Alex_Valezzi.jpg"
+import AlexImg from "../assets/img/pages/about/Alex_Valezzi.jpg"
 
 
 const CarouselImg = styled.img`
