@@ -25,7 +25,7 @@ export const Contact = () => {
     const sendEmail = (e) => {      
             e.preventDefault();
             
-            if (email.value == "" || numberPhone.value == ""){
+            if (document.getElementById("reply_to").value == "" || document.getElementById("phone").value == ""){
                 alert("Preencha Email ou Whatsapp")
             } 
             else{
