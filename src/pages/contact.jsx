@@ -24,7 +24,12 @@ export const Contact = () => {
 
     const sendEmail = (e) => {      
             e.preventDefault();
-            emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
+            
+            if (email.value == "" || numberPhone.value == ""){
+                alert("Preencha Email ou Whatsapp")
+            } 
+            else{
+                emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
                 .then((result) => {
                     console.log(result.text);
                     alert("Sucesso! Sua Mensagem foi enviada.")
@@ -32,6 +37,7 @@ export const Contact = () => {
                     console.log(error.text);
                     alert("erro" + error)
                 });
+            }
 
         }
 
