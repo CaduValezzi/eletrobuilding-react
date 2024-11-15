@@ -9,7 +9,6 @@ import { EletricEngineering } from "./pages/eletricengineering";
 import { EletronicSecurity } from "./pages/eletronicsecurity";
 import { SolarEnergy } from "./pages/solarenergy";
 import { Blog } from "./pages/blog";
-
 import { NotFound } from "./pages/notfound"
 // components
 import { AnimatedMenu } from "./components/animated_menu"

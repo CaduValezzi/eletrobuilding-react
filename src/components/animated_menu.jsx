@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 import Logo from "../assets/img/png-jpeg/logo/EB-dark.png"
 
-
 const Header = Styled.header`
     background-color: transparent;
     backdrop-filter: blur(10px);

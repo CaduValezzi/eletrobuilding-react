@@ -108,7 +108,7 @@ export const Contact = () => {
                         </main>
 
 
-                        <section className="container my-4 p-5" id="maptalktous">
+                        {/* <section className="container my-4 p-5" id="maptalktous">
                             <div className="col-12 col-md-12 ">
                                 <h3 className="display-8 w-75 mb-4">Onde Estamos?</h3>
                                 <div className="text-center">
@@ -119,7 +119,7 @@ export const Contact = () => {
                                 </div>
 
                             </div>
-                        </section>
+                        </section> */}
                     </div>
                 </div>
             </div>
