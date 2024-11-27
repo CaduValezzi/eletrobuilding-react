@@ -66,8 +66,7 @@ export const Contact = () => {
                                                 type="text"
                                                 className="form-control"
                                                 id="from_name"
-                                                name="from_name"
-                                                placeholder="Exemplo: Fulano da Silva (nome fictício)" />
+                                                name="from_name"/>
                                         </div>
                                         <div className="mb-3">
                                             <label htmlFor="reply_to" className="form-label">Email</label>
@@ -75,8 +74,7 @@ export const Contact = () => {
                                                 type="email"
                                                 className="form-control"
                                                 id="reply_to" name="reply_to"
-                                                aria-describedby="emailHelp"
-                                                placeholder="Exemplo: fulano.silva@email.com (email fictício)" />
+                                                aria-describedby="emailHelp" />
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu e-mail com mais ninguém.</div>
                                         </div>
                                         <div className="mb-3">
@@ -85,7 +83,7 @@ export const Contact = () => {
                                                 className="form-control"
                                                 id="phone"
                                                 name="phone"
-                                                aria-describedby="tel" placeholder="Exemplo: 1149914110" />
+                                                aria-describedby="tel"/>
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu whatsapp com mais ninguém.</div>
                                         </div>
                                     </div>
@@ -112,10 +110,6 @@ export const Contact = () => {
                             <div className="col-12 col-md-12 ">
                                 <h3 className="display-8 w-75 mb-4">Onde Estamos?</h3>
                                 <div className="text-center">
-                                    <Maps src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14619.997647624885!2d-46.5427378!3d-23.6401921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce438d5b3062af%3A0x923f01d7b7d98273!2sEletro%20Building!5e0!3m2!1spt-BR!2sbr!4v1694616774078!5m2!1spt-BR!2sbr"
-                                        allowFullScreen=""
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"></Maps>
                                 </div>
 
                             </div>
