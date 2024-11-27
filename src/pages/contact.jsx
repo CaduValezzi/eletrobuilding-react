@@ -16,16 +16,16 @@ const Maps = styled.iframe`
 
 export const Contact = () => {
 
-    const name = document.getElementById("from_name");
+    // const name = document.getElementById("from_name");
     const email = document.getElementById("reply_to");
-    const message = document.getElementById("message");
+    // const message = document.getElementById("message");
     const numberPhone = document.getElementById("phone");
     const form = useRef();
 
     const sendEmail = (e) => {      
             e.preventDefault();
             
-            if (document.getElementById("reply_to").value == "" || document.getElementById("phone").value == ""){
+            if (email.value === "" || numberPhone.value === ""){
                 alert("Preencha Email ou Whatsapp")
             } 
             else{

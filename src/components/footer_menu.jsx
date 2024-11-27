@@ -81,7 +81,7 @@ export const FooterMenu = () => {
 
                     </div>
                     {/* test */}
-                    <p className="text-center mt-4" id="copyright"></p>
+                    <p className="text-center mt-4" id="copyright">&copy; {anoAtual} Eletro Building. Todos os direitos reservados.</p>
 
 
                 </FooterSection>
