@@ -26,7 +26,7 @@ export const FooterMenu = () => {
     var copyright = document.querySelector("#copyright")
     var dataAtual = new Date();
     var anoAtual = dataAtual.getFullYear();
-    copyright.innerHTML = "&copy;" + {anoAtual} + "Eletro Building. Todos os direitos reservados."
+    // copyright.innerHTML = "&copy;" + {anoAtual} + "Eletro Building. Todos os direitos reservados."
 
     return (
         <>
