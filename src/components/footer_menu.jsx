@@ -23,6 +23,11 @@ const ColunmItens = styled.li`
 `
 
 export const FooterMenu = () => {
+    var copyright = document.querySelector("#copyright")
+    var dataAtual = new Date();
+    var anoAtual = dataAtual.getFullYear();
+    copyright.innerHTML = "&copy;" + {anoAtual} + "Eletro Building. Todos os direitos reservados."
+
     return (
         <>
             <Footer className="container-fluid">
@@ -36,7 +41,6 @@ export const FooterMenu = () => {
                             <Colunm className="list-group">
                                 <ColunmItens><Link to="/blog" >Blog</Link></ColunmItens>
                             </Colunm>
-
                         </div>
 
                         <div className="col mb-4">
@@ -77,7 +81,7 @@ export const FooterMenu = () => {
 
                     </div>
 
-                    <p className="text-center mt-4">&copy; 2023 Eletro Building. Todos os direitos reservados.</p>
+                    <p className="text-center mt-4" id="copyright"></p>
 
 
                 </FooterSection>
