@@ -15,19 +15,19 @@ const Header = Styled.header`
 const Logoimg = Styled.img`
     height:5vh;
 `
-const ButtonWhats = Styled.button`
-    background-color:#25D366; 
-    &:hover  {
+// const ButtonWhats = Styled.button`
+//     background-color:#25D366; 
+//     &:hover  {
         
-        background-color:#128C7E; 
-    }
-    &:active{
-        border: none !important;
-        background-color: #075E54 !important;
-    }
+//         background-color:#128C7E; 
+//     }
+//     &:active{
+//         border: none !important;
+//         background-color: #075E54 !important;
+//     }
     
    
-`
+// `
 const ButtonInsta = Styled.button`
     background:linear-gradient(130deg, #515bd4, #8134af, #dd2a7b, #feda77, #f58529);
     border: none; 
@@ -119,12 +119,7 @@ export function AnimatedMenu() {
                                 </li>
                             </ul>
                             <ul className="navbar-nav ms-auto">
-                                <li className="nav-item">
-                                    <Link to="https://wa.me/+551149914110" target="_blank" className="nav-link">
-                                        <ButtonWhats className="btn text-white"><i className="bi bi-whatsapp"></i> (11) 4991-4110
-                                        </ButtonWhats>
-                                    </Link>
-                                </li>
+                                
                                 <li className="nav-item">
                                     <Link to="https://www.instagram.com/eletro.building" 
                                     target="_blank" 

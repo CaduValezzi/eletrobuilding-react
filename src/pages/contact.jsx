@@ -77,7 +77,7 @@ export const Contact = () => {
                                                 aria-describedby="emailHelp" />
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu e-mail com mais ninguém.</div>
                                         </div>
-                                        <div className="mb-3">
+                                        {/* <div className="mb-3">
                                             <label htmlFor="phone" className="form-label">WhatsApp</label>
                                             <input type="tel"
                                                 className="form-control"
@@ -85,7 +85,7 @@ export const Contact = () => {
                                                 name="phone"
                                                 aria-describedby="tel"/>
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu whatsapp com mais ninguém.</div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="col-12">
                                         <div className="mb-3">
