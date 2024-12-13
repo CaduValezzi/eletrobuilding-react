@@ -62,8 +62,8 @@ export const FooterMenu = () => {
                         <div className="col mb-4">
                             <h5 className="mb-4">Fale Conosco</h5>
                             <Colunm className="list-group">
-                                <ColunmItens><a className="fs-6" href="mailto:contato@eletrobuilding.com.br">contato@eletrobuilding.com.br</a></ColunmItens>
-                                <ColunmItens><a href="tel:1149914110"><i className="bi bi-telephone-fill"></i> (11) 4991-4110</a></ColunmItens>
+                                <ColunmItens><a className="fs-6" href="mailto:contato@eletrobuilding.com.br" target="blank_">contato@eletrobuilding.com.br</a></ColunmItens>
+                                
 
                             </Colunm>
                         </div>
