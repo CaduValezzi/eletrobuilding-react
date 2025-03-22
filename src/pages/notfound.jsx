@@ -10,7 +10,6 @@ export const NotFound = () => {
         <>
             <main className="container my-4 text-center">
                 <section className="py-5">
-                    <Img404 className="col-12 img-fluid" src={Image404} alt="" />
                 </section>
             </main>
 
