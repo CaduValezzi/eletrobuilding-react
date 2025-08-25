@@ -8,11 +8,11 @@ import { SectionMenuContact } from "../components/contact/section_menu";
 // import { SectionMenuGeneric } from "../components/generic/section_menu";
 
 
-const Maps = styled.iframe`
-    width:100%;
-    height:50vh;  
+// const Maps = styled.iframe`
+//     width:100%;
+//     height:50vh;  
      
-`
+// `
 
 export const Contact = () => {
 
