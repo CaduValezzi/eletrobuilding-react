@@ -15,32 +15,30 @@ const Header = Styled.header`
 const Logoimg = Styled.img`
     height:5vh;
 `
-// const ButtonWhats = Styled.button`
-//     background-color:#25D366; 
-//     &:hover  {
+const ButtonSocial = Styled.button`
+    background-color:#eac24a; 
+
+    &:hover  {
+        background-color:#d19e2d; 
         
-//         background-color:#128C7E; 
-//     }
-//     &:active{
-//         border: none !important;
-//         background-color: #075E54 !important;
-//     }
+    }
+    &:active{
+        background-color: #88661d !important;
+    }
     
    
-// `
-const ButtonInsta = Styled.button`
-    background:linear-gradient(130deg, #515bd4, #8134af, #dd2a7b, #feda77, #f58529);
-    border: none; 
+ `
+/* const ButtonInsta = Styled.button`
+    background:linear-gradient(0deg, #d19e2d, #eac24a, #d19e2d ); 
     &:hover  {
-        
-        background-color:#128C7E; 
+        background:linear-gradient(130deg, #515bd4, #8134af, #dd2a7b, #feda77, #f58529);
     }
     &:active{
         border: none !important;
         background-color: #075E54 !important;
     }
     
-`
+` */
 
 
 
@@ -124,9 +122,16 @@ export function AnimatedMenu() {
                                     <Link to="https://www.instagram.com/eletro.building" 
                                     target="_blank" 
                                     className="nav-link">
-                                        <ButtonInsta className="btn text-white"><i className="bi bi-instagram "></i> 
-                                        {/* Instagram */}
-                                        </ButtonInsta>
+                                        <ButtonSocial className="btn text-white"><i className="bi bi-instagram "></i> 
+                                        </ButtonSocial>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="https://wa.me/551149914110" 
+                                    target="_blank" 
+                                    className="nav-link">
+                                        <ButtonSocial className="btn text-white"><i class="bi bi-whatsapp"></i> 
+                                        </ButtonSocial>
                                     </Link>
                                 </li>
                             </ul>

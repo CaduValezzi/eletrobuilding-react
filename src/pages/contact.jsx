@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import styled from "styled-components";
 import emailjs from '@emailjs/browser';
 // import ReCAPTCHA from "react-google-recaptcha";
 
@@ -16,9 +15,9 @@ import { SectionMenuContact } from "../components/contact/section_menu";
 
 export const Contact = () => {
 
-    // const name = document.getElementById("from_name");
+    const name = document.getElementById("from_name");
     const email = document.getElementById("reply_to");
-    // const message = document.getElementById("message");
+    const message = document.getElementById("message");
     const numberPhone = document.getElementById("phone");
     const form = useRef();
 
@@ -40,10 +39,18 @@ export const Contact = () => {
             }
 
         }
+    const Whatsapp = (e) => {
+        e.preventDefault();
 
-
-
-
+        if (email.value === "" || numberPhone.value === ""){
+            alert("Preencha Email ou Whatsapp")
+        } 
+        else{
+            const whatsappMessage = `Olá, meu nome é ${name.value}.\n Meu email é ${email.value} e meu WhatsApp é ${numberPhone.value}.\n Mensagem: ${message.value}`;
+            const whatsappUrl = `https://wa.me/551149914110?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappUrl, "_blank");
+        }
+    }
 
 
     return (
@@ -77,7 +84,7 @@ export const Contact = () => {
                                                 aria-describedby="emailHelp" />
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu e-mail com mais ninguém.</div>
                                         </div>
-                                        {/* <div className="mb-3">
+                                        <div className="mb-3">
                                             <label htmlFor="phone" className="form-label">WhatsApp</label>
                                             <input type="tel"
                                                 className="form-control"
@@ -85,7 +92,7 @@ export const Contact = () => {
                                                 name="phone"
                                                 aria-describedby="tel"/>
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu whatsapp com mais ninguém.</div>
-                                        </div> */}
+                                        </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="mb-3">
@@ -99,9 +106,21 @@ export const Contact = () => {
                                             type="submit"
                                             className="btn btn-primary"
                                             value="Send"
-                                            id="submit">Enviar</button>
+                                            id="submit">
+                                            E-mail
+                                        </button>
+                                        <button
+                                            onClick={Whatsapp}
+                                            className="btn btn-primary ms-4"
+                                            value="Send"
+                                            id="w-submit">
+                                            Whatsapp
+                                        </button>
+                                        
                                     </div>
+                                    
                                 </form>
+                                
                             </section>
                         </main>
 
@@ -117,9 +136,6 @@ export const Contact = () => {
                     </div>
                 </div>
             </div>
-
-
-
         </>
     );
 }
