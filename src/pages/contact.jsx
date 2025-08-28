@@ -55,15 +55,18 @@ export const Contact = () => {
         }
     const Whatsapp = (e) => {
         e.preventDefault();
+        let errorMessage = "";
 
-        if (emailRef.current.value === "" || phoneRef.current.value === ""){
-            alert("Preencha Email ou Whatsapp")
-        } 
-        else{
-            const whatsappMessage = `Olá, meu nome é ${nameRef.current.value}.\n Meu email é ${emailRef.current.value} e meu WhatsApp é ${phoneRef.current.value}.\n Mensagem: ${messageRef.current.value}`;
-            const whatsappUrl = `https://wa.me/551149914110?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappUrl, "_blank");
-        }
+        nameRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de nome.\n");
+        emailRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de email.\n");
+        phoneRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de WhatsApp.\n");
+        messageRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de mensagem.\n");
+
+        const whatsappMessage = `Olá, meu nome é ${nameRef.current.value}.\n Meu email é ${emailRef.current.value} e meu WhatsApp é ${phoneRef.current.value}.\n Mensagem: ${messageRef.current.value}`;
+        const whatsappUrl = `https://wa.me/551149914110?text=${encodeURIComponent(whatsappMessage)}`;
+        
+        errorMessage ? alert(errorMessage) : window.open(whatsappUrl, "_blank");
+
     }
 
 
