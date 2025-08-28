@@ -1,11 +1,16 @@
 import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
+import styled from "styled-components";
 // import ReCAPTCHA from "react-google-recaptcha";
 
 
 import { SectionMenuContact } from "../components/contact/section_menu";
 // import { SectionMenuGeneric } from "../components/generic/section_menu";
+const Textinput = styled.textarea`
+    height: 10rem;
+    resize: none;
 
+`;
 
 // const Maps = styled.iframe`
 //     width:100%;
@@ -97,8 +102,8 @@ export const Contact = () => {
                                     <div className="col-12">
                                         <div className="mb-3">
                                             <label htmlFor="message" className="form-label">Mensagem</label>
-                                            <textarea className="form-control" id="message" rows="5" name="message"
-                                                placeholder="Deixe aqui sua mensagem" maxLength="500"></textarea>
+                                            <Textinput className="form-control" id="message" rows="5" name="message"
+                                                placeholder="Deixe aqui sua mensagem" maxLength="500"></Textinput>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
