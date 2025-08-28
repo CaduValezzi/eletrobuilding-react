@@ -24,39 +24,36 @@ export const Contact = () => {
     const emailRef = useRef();
     const phoneRef = useRef();
     const messageRef = useRef();
+    let errorMessage = "";
+
 
     const form = useRef();
     // console.log(name.gethtml);
     const sendEmail = (e) => {      
-            e.preventDefault();
-                let errorMessage = "";
-
-                nameRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de nome.\n");
-                emailRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de email.\n");
-                phoneRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de WhatsApp.\n");
-                messageRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de mensagem.\n");
-
-                if (errorMessage) {
-                    alert(errorMessage);
-                    return;
-                }else{
-                emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
-                .then((result) => {
-                    console.log(result.text);
-                    alert("Sucesso! Sua Mensagem foi enviada.")
-                }, (error) => {
-                    console.log(error.text);
-                    alert("erro" + error)
-                });
-                }
+        e.preventDefault();
+        nameRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de nome.\n");
+        emailRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de email.\n");
+        phoneRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de WhatsApp.\n");
+        messageRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de mensagem.\n");
+        if (errorMessage) {
+            alert(errorMessage);
+            return;
+        }else{
+        emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
+        .then((result) => {
+            console.log(result.text);
+            alert("Sucesso! Sua Mensagem foi enviada.")
+        }, (error) => {
+            console.log(error.text);
+            alert("erro" + error)
+        });
+        }
 
                 
 
         }
     const Whatsapp = (e) => {
         e.preventDefault();
-        let errorMessage = "";
-
         nameRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de nome.\n");
         emailRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de email.\n");
         phoneRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de WhatsApp.\n");
