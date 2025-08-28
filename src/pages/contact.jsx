@@ -44,18 +44,18 @@ export const Contact = () => {
             }
 
         }
-    const Whatsapp = (e) => {
-        e.preventDefault();
+    // const Whatsapp = (e) => {
+    //     e.preventDefault();
 
-        if (email.value === "" || numberPhone.value === ""){
-            alert("Preencha Email ou Whatsapp")
-        } 
-        else{
-            const whatsappMessage = `Olá, meu nome é ${name.value}.\n Meu email é ${email.value} e meu WhatsApp é ${numberPhone.value}.\n Mensagem: ${message.value}`;
-            const whatsappUrl = `https://wa.me/551149914110?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappUrl, "_blank");
-        }
-    }
+    //     if (email.value === "" || numberPhone.value === ""){
+    //         alert("Preencha Email ou Whatsapp")
+    //     } 
+    //     else{
+    //         const whatsappMessage = `Olá, meu nome é ${name.value}.\n Meu email é ${email.value} e meu WhatsApp é ${numberPhone.value}.\n Mensagem: ${message.value}`;
+    //         const whatsappUrl = `https://wa.me/551149914110?text=${encodeURIComponent(whatsappMessage)}`;
+    //         window.open(whatsappUrl, "_blank");
+    //     }
+    // }
 
 
     return (
@@ -114,13 +114,13 @@ export const Contact = () => {
                                             id="submit">
                                             E-mail
                                         </button>
-                                        <button
+                                        {/* <button
                                             onClick={Whatsapp}
                                             className="btn btn-primary ms-4"
                                             value="Send"
                                             id="w-submit">
                                             Whatsapp
-                                        </button>
+                                        </button> */}
                                         
                                     </div>
                                     
