@@ -20,19 +20,26 @@ const Textinput = styled.textarea`
 
 export const Contact = () => {
 
-    const name = document.getElementById("from_name");
-    const email = document.getElementById("reply_to");
-    const message = document.getElementById("message");
-    const numberPhone = document.getElementById("phone");
-    const form = useRef();
+    const nameRef = useRef();
+    const emailRef = useRef();
+    const phoneRef = useRef();
+    const messageRef = useRef();
 
+    const form = useRef();
+    // console.log(name.gethtml);
     const sendEmail = (e) => {      
             e.preventDefault();
-            
-            if (email.value === "" || numberPhone.value === ""){
-                alert("Preencha Email ou Whatsapp")
-            } 
-            else{
+                let errorMessage = "";
+
+                nameRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de nome.\n");
+                emailRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de email.\n");
+                phoneRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de WhatsApp.\n");
+                messageRef.current.value === "" && (errorMessage += "Por favor, preencha o campo de mensagem.\n");
+
+                if (errorMessage) {
+                    alert(errorMessage);
+                    return;
+                }else{
                 emailjs.sendForm('service_ltywki5', 'template_e4zqh7x', form.current, 'vu1cixeqH75TR5QAg')
                 .then((result) => {
                     console.log(result.text);
@@ -41,21 +48,23 @@ export const Contact = () => {
                     console.log(error.text);
                     alert("erro" + error)
                 });
-            }
+                }
+
+                
 
         }
-    // const Whatsapp = (e) => {
-    //     e.preventDefault();
+    const Whatsapp = (e) => {
+        e.preventDefault();
 
-    //     if (email.value === "" || numberPhone.value === ""){
-    //         alert("Preencha Email ou Whatsapp")
-    //     } 
-    //     else{
-    //         const whatsappMessage = `Olá, meu nome é ${name.value}.\n Meu email é ${email.value} e meu WhatsApp é ${numberPhone.value}.\n Mensagem: ${message.value}`;
-    //         const whatsappUrl = `https://wa.me/551149914110?text=${encodeURIComponent(whatsappMessage)}`;
-    //         window.open(whatsappUrl, "_blank");
-    //     }
-    // }
+        if (emailRef.current.value === "" || phoneRef.current.value === ""){
+            alert("Preencha Email ou Whatsapp")
+        } 
+        else{
+            const whatsappMessage = `Olá, meu nome é ${nameRef.current.value}.\n Meu email é ${emailRef.current.value} e meu WhatsApp é ${phoneRef.current.value}.\n Mensagem: ${messageRef.current.value}`;
+            const whatsappUrl = `https://wa.me/551149914110?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappUrl, "_blank");
+        }
+    }
 
 
     return (
@@ -78,7 +87,9 @@ export const Contact = () => {
                                                 type="text"
                                                 className="form-control"
                                                 id="from_name"
-                                                name="from_name"/>
+                                                name="from_name"
+                                                ref={nameRef}
+                                            />
                                         </div>
                                         <div className="mb-3">
                                             <label htmlFor="reply_to" className="form-label">Email</label>
@@ -86,7 +97,9 @@ export const Contact = () => {
                                                 type="email"
                                                 className="form-control"
                                                 id="reply_to" name="reply_to"
-                                                aria-describedby="emailHelp" />
+                                                aria-describedby="emailHelp"
+                                                ref={emailRef}
+                                            />
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu e-mail com mais ninguém.</div>
                                         </div>
                                         <div className="mb-3">
@@ -95,18 +108,27 @@ export const Contact = () => {
                                                 className="form-control"
                                                 id="phone"
                                                 name="phone"
-                                                aria-describedby="tel"/>
+                                                aria-describedby="tel"
+                                                ref={phoneRef}
+                                            />
                                             <div id="emailHelp" className="form-text"> Nunca compartilharemos seu whatsapp com mais ninguém.</div>
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="mb-3">
                                             <label htmlFor="message" className="form-label">Mensagem</label>
-                                            <Textinput className="form-control" id="message" rows="5" name="message"
-                                                placeholder="Deixe aqui sua mensagem" maxLength="500"></Textinput>
+                                            <Textinput 
+                                            className="form-control" 
+                                            id="message" rows="5" 
+                                            name="message"
+                                            ref={messageRef}
+                                            placeholder="Deixe aqui sua mensagem" maxLength="500"></Textinput>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
+                                        <div>
+                                            Mande por e-mail ou Whatsapp
+                                        </div>
                                         <button
                                             type="submit"
                                             className="btn btn-primary"
@@ -114,13 +136,13 @@ export const Contact = () => {
                                             id="submit">
                                             E-mail
                                         </button>
-                                        {/* <button
+                                        <button
                                             onClick={Whatsapp}
                                             className="btn btn-primary ms-4"
                                             value="Send"
                                             id="w-submit">
                                             Whatsapp
-                                        </button> */}
+                                        </button>
                                         
                                     </div>
                                     

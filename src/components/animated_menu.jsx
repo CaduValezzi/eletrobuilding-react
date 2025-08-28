@@ -13,7 +13,7 @@ const Header = Styled.header`
     font-weight: 600;
 `
 const Logoimg = Styled.img`
-    height:5vh;
+    height:  2rem;
 `
 const ButtonSocial = Styled.button`
     background-color:#eac24a; 
@@ -52,10 +52,10 @@ export function AnimatedMenu() {
     window.addEventListener('scroll', () => {   
         
         if (window.scrollY > 150 ) {
-            document.querySelector(".menu").classList.add("bg-white", "p-2", "shadow")
+            document.querySelector(".menu").classList.add("bg-white", "p-1", "shadow")
         }
         else if(window.scrollY < 150 && document.querySelector(".menu").clientHeight < 344) {
-            document.querySelector(".menu").classList.remove("bg-white", "p-2", "shadow")
+            document.querySelector(".menu").classList.remove("bg-white", "p-1", "shadow")
         }
 
     })
