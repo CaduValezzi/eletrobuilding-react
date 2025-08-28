@@ -126,7 +126,7 @@ export const Contact = () => {
                                         </div>
                                     </div>
                                     <div className="col-md-6">
-                                        <div>
+                                        <div className="mb-2">
                                             Mande por e-mail ou Whatsapp
                                         </div>
                                         <button
