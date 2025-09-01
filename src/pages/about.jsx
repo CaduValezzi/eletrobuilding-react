@@ -114,9 +114,9 @@ export const About = () => {
                                     Sobre Alex Valezzi
                                 </h2>
                                 <div className="row row-cols-2">
-                                    <img className="col-12 col-md-6 my-auto" src={AlexImg} alt="" />
+                                    <img className="col-12 col-md-6 my-auto" src={AlexImg} alt="imagem Alex Valezzi" />
                                     <p className="col-12 col-md-6">
-                                        Empresário proprietário da empresa Eletro Building Comércio e Serviços Ltda, atuando na grande parte dos negócios em Energia Solar, Instalações Elétricas e Segurança Eletrônica, graduado em Engenharia Industrial Elétrica pela Unisanta e Engenharia de Segurança do Trabalho pela FAAP, é especialista em Sistemas Elétricos, com grande conhecimento em Sistemas de Abastecimento, Utilidades, Automação e Telecomunicação, tem mais de quarenta anos de experiência na área, sendo trinta e cinco anos trabalhados em empresa multinacional do setor Automobilístico, e os demais anos em empresas do setor Plástico.
+                                        Diretor proprietário da empresa Eletro Building Comércio e Serviços Ltda, atuando na grande parte dos negócios em Energia Solar, Instalações Elétricas e Segurança Eletrônica, graduado em Engenharia Industrial Elétrica pela Unisanta e Engenharia de Segurança do Trabalho pela FAAP, é especialista em Sistemas Elétricos, com grande conhecimento em Sistemas de Abastecimento, Utilidades, Automação e Telecomunicação, tem mais de quarenta anos de experiência na área, sendo trinta e cinco anos trabalhados em empresa multinacional do setor Automobilístico, e os demais anos em empresas do setor Plástico.
                                     </p>
                                     <p className="col-12">
                                         É Green Belt em Seis Sigma, implementou melhoria contínua (Kaizen / PMC) e gerenciamento em Segurança do Trabalho em muitos processos produtivos e administrativos, trazendo excelentes resultados. Também prestou serviços em empresas de vários outros setores, ministrou cursos normativos como NR10, e técnicos como SAP e Eletricidade, inclusive no SENAI.</p>
