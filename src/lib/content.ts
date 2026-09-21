@@ -398,8 +398,7 @@ export type Article = {
   title: string;
   excerpt: string;
   category: string;
-  date: string;
-  readingTime: string;
+  date: string
   content: string[];
   image: string;
   imageAlt: string;
@@ -415,7 +414,6 @@ export const articles: Article[] = [
       "Entenda o que a norma regulamentadora exige de instalações elétricas industriais e comerciais — e o que acontece quando ela é ignorada.",
     category: "Segurança do Trabalho",
     date: "2026-02-10",
-    readingTime: "5 min",
     content: [
       "A NR-10 é a norma regulamentadora que trata de segurança em instalações e serviços com eletricidade. Ela se aplica a qualquer empresa que tenha instalações elétricas em operação, independentemente do porte ou do setor.",
       "Na prática, a norma exige que a empresa mantenha um prontuário de instalações elétricas atualizado, com documentação técnica, procedimentos de trabalho seguro e comprovação de treinamento das equipes que atuam próximo a painéis e circuitos energizados.",
@@ -432,7 +430,6 @@ export const articles: Article[] = [
       "Um panorama direto sobre como funciona um sistema fotovoltaico conectado à rede e em quanto tempo ele costuma se pagar.",
     category: "Energia Solar",
     date: "2026-02-24",
-    readingTime: "6 min",
     content: [
       "Um sistema de energia solar on-grid é conectado diretamente à rede da concessionária: a energia gerada pelos painéis é usada no consumo do imóvel, e o excedente é injetado na rede, gerando créditos de energia que podem ser abatidos na conta seguinte.",
       "Para comércios com consumo relevante durante o dia — quando os painéis geram mais energia —, o retorno tende a ser mais rápido, já que boa parte da energia gerada é consumida no próprio horário de operação.",
@@ -449,7 +446,6 @@ export const articles: Article[] = [
       "Por que esperar o problema acontecer costuma custar mais caro do que planejar a manutenção da instalação elétrica.",
     category: "Manutenção",
     date: "2026-03-05",
-    readingTime: "4 min",
     content: [
       "A manutenção corretiva resolve um problema depois que ele já aconteceu — um disjuntor que desarma, um painel que superaquece, um circuito que falha durante a operação. Ela é necessária, mas normalmente vem acompanhada de um custo indireto maior: a parada não planejada.",
       "Já a manutenção preventiva atua antes da falha, por meio de inspeções periódicas, termografia em painéis e verificação de pontos de aquecimento, conexões e proteções. O objetivo é identificar um problema em formação antes que ele vire uma parada de fato.",
@@ -466,7 +462,6 @@ export const articles: Article[] = [
       "As primeiras perguntas que todo projeto de câmeras precisa responder antes da escolha de qualquer equipamento.",
     category: "Segurança Eletrônica",
     date: "2026-03-18",
-    readingTime: "5 min",
     content: [
       "Antes de escolher marca ou modelo de câmera, um projeto de CFTV bem-feito começa com perguntas simples: quais são os pontos de maior risco no local? O que precisa ser monitorado em tempo real e o que só precisa ficar gravado para consulta posterior?",
       "Esse levantamento define aspectos técnicos importantes, como a necessidade de câmeras com visão noturna, cobertura de longo alcance ou reconhecimento facial, além do tempo de retenção de gravação exigido pela operação.",
@@ -483,7 +478,6 @@ export const articles: Article[] = [
       "Entenda o que essa anotação garante ao cliente e por que a ausência dela é um sinal de alerta na contratação.",
     category: "Engenharia Elétrica",
     date: "2026-04-02",
-    readingTime: "4 min",
     content: [
       "A Anotação de Responsabilidade Técnica (ART) é o documento emitido junto ao CREA que formaliza a responsabilidade de um engenheiro sobre um projeto ou uma execução técnica. Ela existe para que exista alguém, de fato, respondendo tecnicamente pelo que foi entregue.",
       "Em uma instalação elétrica, isso significa que o dimensionamento, os materiais especificados e a execução foram acompanhados por um profissional habilitado — e não apenas montados por conta própria, sem respaldo técnico.",
@@ -500,7 +494,6 @@ export const articles: Article[] = [
       "Por que uma rede bem cabeada evita boa parte dos problemas de lentidão e instabilidade no dia a dia da operação.",
     category: "Redes",
     date: "2026-04-15",
-    readingTime: "5 min",
     content: [
       "Cabeamento estruturado é a organização física da rede de dados de um imóvel: cabos identificados, rotas planejadas, racks organizados e pontos certificados. É a base sobre a qual internet, telefonia, CFTV e automação vão funcionar.",
       "Quando essa infraestrutura não existe — ou foi montada de forma improvisada ao longo do tempo —, é comum ver quedas de conexão, lentidão intermitente e dificuldade para localizar a origem de um problema de rede.",

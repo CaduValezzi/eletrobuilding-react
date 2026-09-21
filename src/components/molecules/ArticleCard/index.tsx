@@ -10,7 +10,6 @@ export function ArticleCard({
   excerpt,
   category,
   date,
-  readingTime,
   image,
   imageAlt,
 }: ArticleCardProps) {
@@ -31,9 +30,6 @@ export function ArticleCard({
         <div className="p-7">
           <div className="mb-5 flex items-center justify-between">
             <Badge>{category}</Badge>
-            <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-              {readingTime}
-            </span>
           </div>
           <h3 className="mb-3 font-display text-2xl font-semibold uppercase leading-tight tracking-tight text-foam">
             {title}
