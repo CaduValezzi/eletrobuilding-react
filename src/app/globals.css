@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-950: 255 255 255;
+  --c-900: 243 240 232;
+  --c-800: 234 228 212;
+  --c-700: 220 211 188;
+  --c-foam: 20 24 29;
+  --c-muted: 91 97 105;
+  --c-line: 20 24 29;
+  --c-volt-dim: 138 104 0;
+}
+
+.dark {
+  --c-950: 10 13 16;
+  --c-900: 18 22 27;
+  --c-800: 27 33 41;
+  --c-700: 38 46 56;
+  --c-foam: 237 238 240;
+  --c-muted: 154 163 172;
+  --c-line: 255 255 255;
+  --c-volt-dim: 245 183 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--c-950));
+  color: rgb(var(--c-foam));
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: #f5b700;
+  color: #14181d;
+}
+
+:focus-visible {
+  outline: 2px solid #f5b700;
+  outline-offset: 3px;
+}
+
+@layer utilities {
+  .container-edge {
+    @apply mx-auto w-full max-w-[1240px] px-6 md:px-10;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.28em] text-volt;
+  }
+
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+
+  .hairline {
+    @apply border border-line;
+  }
+
+  .bg-noise {
+    background-image: radial-gradient(rgb(var(--c-foam) / 0.05) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

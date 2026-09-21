@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Eletro Building — Site Institucional
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Site institucional multi-página da **Eletro Building** em **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS**, seguindo a arquitetura **Atomic Design**. Direção visual inspirada em [seemengineering.com](https://seemengineering.com/), adaptada à identidade elétrica/industrial da Eletro Building.
 
-## Available Scripts
+## Como rodar
 
-In the project directory, you can run:
+```bash
+npm install
+npm run dev
+```
 
-### `npm start`
+Acesse `http://localhost:3000`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Para build de produção:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm run build
+npm run start
+```
 
-### `npm test`
+## Páginas do site
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Página | Rota | Descrição |
+|---|---|---|
+| Início | `/` | Landing page focada em conversão: hero, prova social, serviços em destaque, processo, diferenciais, artigos recentes, FAQ e CTA final |
+| Serviços | `/servicos` | Listagem dos 6 serviços da empresa |
+| Serviço (detalhe) | `/servicos/[slug]` | Página individual de cada serviço — o que inclui, indicado para, serviços relacionados |
+| Sobre nós | `/sobre` | História, missão/visão/valores, segmentos atendidos e perfil do diretor técnico |
+| Artigos | `/artigos` | Listagem em cards de todos os artigos |
+| Artigo (detalhe) | `/artigos/[slug]` | Conteúdo completo do artigo + artigos relacionados |
+| Contato | `/contato` | Formulário simples: Nome, E-mail, Celular e Mensagem |
 
-### `npm run build`
+Os slugs de serviços e artigos são gerados automaticamente a partir de `src/lib/content.ts` (`generateStaticParams`), então basta adicionar um novo item ao array correspondente para gerar uma nova página.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Arquitetura (Atomic Design)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+├── app/
+│   ├── layout.tsx              # Layout raiz, metadados SEO, fontes
+│   ├── page.tsx                # Início
+│   ├── not-found.tsx           # 404 customizado
+│   ├── servicos/
+│   │   ├── page.tsx            # Listagem de serviços
+│   │   └── [slug]/page.tsx     # Detalhe de um serviço
+│   ├── sobre/page.tsx
+│   ├── artigos/
+│   │   ├── page.tsx            # Listagem de artigos
+│   │   └── [slug]/page.tsx     # Detalhe de um artigo
+│   ├── contato/page.tsx
+│   └── globals.css             # Tokens globais e utilitários Tailwind
+├── lib/
+│   └── content.ts               # Todo o copy do site, tipos Service/Article, helpers de slug
+└── components/
+    ├── atoms/       # Button, Eyebrow, SectionHeading, Numeral, Divider, Badge, BackLink, VoltTrace
+    ├── molecules/   # ServiceLinkCard, ArticleCard, ChecklistItem, InfoCard, FactCard,
+    │                # BenefitRow, ProcessStep, FaqItem, FormField, FooterColumn, NavLink
+    ├── organisms/   # Header, Hero, AboutTeaser, AboutStory, DirectorProfile, ServicesTeaser,
+    │                # ServicesListing, ServiceDetailBody, ArticlesTeaser, ArticlesListing,
+    │                # ArticleDetailBody, Process, Benefits, Faq, Contact, CtaBanner, Footer, PageHero
+    └── templates/   # HomeTemplate, ServicosTemplate, ServicoDetalheTemplate, SobreTemplate,
+                     # ArtigosTemplate, ArtigoDetalheTemplate, ContatoTemplate
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para editar textos (serviços, artigos, FAQ, dados da empresa, perfil do diretor), o único arquivo que precisa ser tocado na maioria dos casos é `src/lib/content.ts`.
 
-### `npm run eject`
+## O que precisa ser ajustado antes de publicar
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Como o site atual (`eletrobuilding.com.br`) é uma SPA renderizada 100% em JavaScript, não foi possível extrair o conteúdo original automaticamente. O copy foi reconstruído com base em informações públicas da empresa (LinkedIn) e precisa de revisão:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **`src/lib/content.ts` → `siteConfig`**: e-mail, telefone e endereço estão com valores de exemplo — troque pelos dados reais.
+- **`src/lib/content.ts` → `director`**: nome e registro no CREA estão com placeholder. A foto real do diretor ainda não foi fornecida — o componente `DirectorProfile` reserva o espaço; quando tiver o arquivo, salve em `public/images/` e troque o placeholder de texto por um `<Image>` apontando para ele.
+- **Formulário de contato** (`src/components/organisms/Contact.tsx`): hoje é apenas visual (`<form>` sem `action`). É preciso conectar a um endpoint real (API Route do Next.js, serviço de e-mail como Resend/SendGrid, ou webhook de CRM/WhatsApp).
+- **Artigos**: os 6 artigos em `content.ts` foram escritos como conteúdo educativo genérico sobre os temas da empresa (NR-10, energia solar, manutenção, CFTV, ART, cabeamento). Revise com o time técnico antes de publicar, e sinta-se à vontade para adicionar novos itens ao array `articles` — a página de slug é gerada automaticamente.
+- Revisar todos os textos de serviços, diferenciais e FAQ com o time da Eletro Building para garantir precisão técnica (normas citadas, escopo de cada serviço etc.).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Animações (GSAP)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O site usa **GSAP** (com o plugin **ScrollTrigger**) para as animações de entrada, centralizadas em `src/lib/gsap.ts`:
 
-## Learn More
+- **Textos** — `SectionHeading` e `Eyebrow` (usados na maioria das seções do site) revelam-se com um fade + leve deslocamento vertical assim que entram na viewport, cada um controlando sua própria animação via `ScrollTrigger`. Os títulos das páginas de serviço e artigo, e o bloco de texto da hero da Início, animam na carga da página com uma timeline (`gsap.timeline`), incluindo um efeito de "máscara" linha a linha no título da hero.
+- **`VoltTrace`** (o traço de circuito assinatura, abaixo da foto da hero) — o traço é desenhado progressivamente com `strokeDashoffset` animado via GSAP (em vez do CSS puro anterior), os pontos "acendem" em sequência ao final do desenho, e depois entram num pulso contínuo e sutil simulando corrente elétrica fluindo. Dispara uma vez, quando o elemento entra na viewport.
+- **Acessibilidade** — todas as animações checam `prefers-reduced-motion` (função `prefersReducedMotion()` em `src/lib/gsap.ts`) e são desativadas para quem tiver essa preferência ativada no sistema, mostrando o conteúdo já no estado final.
+- As animações são puramente client-side (`useLayoutEffect`/GSAP) e não afetam o HTML pré-renderizado: se o JavaScript falhar ao carregar, todo o texto permanece visível normalmente (progressive enhancement).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Modo claro / escuro
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+O site tem um botão de alternância de tema no cabeçalho (ícone de lua/sol), ao lado do botão de orçamento. Implementado com `next-themes`:
 
-### Code Splitting
+- Preferência salva em `localStorage` e reaplicada em visitas futuras (padrão: modo claro).
+- Um script inline evita o "flash" de tema errado no carregamento da página.
+- Todas as cores do site (fundo, texto, bordas, tom de âmbar usado em textos) são variáveis CSS (`--c-950`, `--c-foam`, `--c-line` etc., definidas em `globals.css`) que trocam de valor conforme a classe `.dark` está ou não presente no `<html>`. Os componentes usam sempre as mesmas classes Tailwind (`bg-graphite-950`, `text-foam`...) — não há necessidade de duplicar classes com prefixo `dark:` em cada componente.
+- Existe também um token fixo `ink` (sempre escuro, independente do tema) usado especificamente onde o texto precisa continuar escuro em qualquer modo — por exemplo, o texto do botão principal (sempre sobre fundo âmbar) e o degradê escuro aplicado sobre as fotos da hero e das páginas de serviço, para o texto branco permanecer legível.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Direção de design
 
-### Analyzing the Bundle Size
+- **Paleta**: base branca/off-white quente (`#FFFFFF` / `#F3F0E8`) combinada com tinta escura para texto (`#14181D`), acento âmbar-voltagem (`#F5B700` para fundos e bordas, `#8A6800` para textos — garante contraste legível sobre branco) e cobre (`#C8672B`) como secundário.
+- **Imagens reais**: logo oficial da empresa (monograma "EB" com raio) no header e no rodapé; fotos de torres de transmissão, painéis solares, transformador de subestação e equipamentos de segurança eletrônica usadas na hero, nas páginas de serviço/artigo e na página Sobre.
+- **Tipografia**: `Barlow Condensed` (display, condensada, industrial) + `Inter` (corpo, legibilidade) + `IBM Plex Mono` (labels técnicos, números, eyebrows) — fontes self-hosted via `@fontsource`, sem dependência de CDN externo em build time.
+- **Elemento assinatura**: `VoltTrace`, um SVG de trilha de circuito que "acende" com animação de traço logo abaixo da foto da hero, reforçando o tema elétrico sem exagerar em efeitos.
+- **Numeração**: usada apenas onde representa uma sequência real (seção "Como Trabalhamos"/Processo) ou contagem (Serviços, Diferenciais) — não é decoração.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Stack
 
-### Making a Progressive Web App
+- Next.js 14.2.35 (App Router)
+- React 18
+- TypeScript
+- Tailwind CSS 3
+- `next-themes` para o modo claro/escuro
+- `gsap` (+ ScrollTrigger) para as animações de entrada e do VoltTrace
+- Fontes self-hosted via `@fontsource`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
