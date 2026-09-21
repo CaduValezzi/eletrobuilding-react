@@ -3,10 +3,10 @@ export const siteConfig = {
   legalName: "Eletro Building Comércio e Serviços Ltda",
   tagline: "Engenharia Elétrica & Segurança",
   email: "contato@eletrobuilding.com.br",
-  phone: "+55 (11) 0000-0000",
-  phoneHref: "tel:+551100000000",
-  whatsapp: "https://wa.me/5511000000000",
-  address: "São Paulo — SP, Brasil",
+  phone: "+55 (11) 1149914110",
+  phoneHref: "tel:+551149914110",
+  whatsapp: "https://wa.me/551149914110",
+  address: "Santo André — SP, Brasil",
 };
 
 export const nav = [
