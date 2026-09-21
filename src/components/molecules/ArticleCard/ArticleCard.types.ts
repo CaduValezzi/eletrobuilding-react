@@ -4,7 +4,6 @@ export type ArticleCardProps = {
   excerpt: string;
   category: string;
   date: string;
-  readingTime: string;
   image: string;
   imageAlt: string;
 };
