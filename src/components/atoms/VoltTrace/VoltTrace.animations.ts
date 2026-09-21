@@ -26,7 +26,7 @@ export function useVoltTraceAnimation({ svgRef, pathRef, dotsRef }: VoltTraceRef
       gsap.set(dotsRef.current, { scale: 0, transformOrigin: "50% 50%" });
 
       const tl = gsap.timeline({
-        scrollTrigger: { trigger: svg, start: "top 85%", once: true },
+        scrollTrigger: { trigger: svg, start: "40% center", once: true, markers: true,},
       });
 
       tl.to(path, { strokeDashoffset: 0, duration: 1.8, ease: "power2.inOut" }).to(
