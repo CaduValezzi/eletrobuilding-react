@@ -50,17 +50,44 @@ src/
 │   ├── contato/page.tsx
 │   └── globals.css             # Tokens globais e utilitários Tailwind
 ├── lib/
-│   └── content.ts               # Todo o copy do site, tipos Service/Article, helpers de slug
+│   ├── content.ts               # Todo o copy do site, tipos Service/Article, helpers de slug
+│   ├── format.ts                 # Utilitário compartilhado (formatDate)
+│   └── gsap.ts                   # Setup central do GSAP (ScrollTrigger, prefersReducedMotion)
 └── components/
-    ├── atoms/       # Button, Eyebrow, SectionHeading, Numeral, Divider, Badge, BackLink, VoltTrace
+    ├── atoms/       # Button, Eyebrow, SectionHeading, Numeral, Divider, Badge, BackLink,
+    │                # ThemeToggle, VoltTrace
     ├── molecules/   # ServiceLinkCard, ArticleCard, ChecklistItem, InfoCard, FactCard,
     │                # BenefitRow, ProcessStep, FaqItem, FormField, FooterColumn, NavLink
     ├── organisms/   # Header, Hero, AboutTeaser, AboutStory, DirectorProfile, ServicesTeaser,
     │                # ServicesListing, ServiceDetailBody, ArticlesTeaser, ArticlesListing,
     │                # ArticleDetailBody, Process, Benefits, Faq, Contact, CtaBanner, Footer, PageHero
-    └── templates/   # HomeTemplate, ServicosTemplate, ServicoDetalheTemplate, SobreTemplate,
-                     # ArtigosTemplate, ArtigoDetalheTemplate, ContatoTemplate
+    ├── templates/   # HomeTemplate, ServicosTemplate, ServicoDetalheTemplate, SobreTemplate,
+    │                # ArtigosTemplate, ArtigoDetalheTemplate, ContatoTemplate
+    └── providers/   # ThemeProvider
 ```
+
+### Convenção: um componente, uma pasta
+
+Todo componente (átomo, molécula, organismo, template ou provider) mora em uma pasta com seu próprio nome, e é sempre importado pelo caminho da pasta (`@/components/atoms/Button`, nunca `.../Button/index`) — o Next.js resolve `index.tsx` automaticamente. Dentro da pasta, cada responsabilidade fica em seu próprio arquivo, criado apenas quando existe algo de fato para separar:
+
+- **`index.tsx`** — o componente em si: só composição/JSX, sem lógica pesada nem strings de classe longas inline.
+- **`<Nome>.types.ts`** — as props do componente, exportadas como `<Nome>Props`. Só existe se o componente recebe props.
+- **`<Nome>.animations.ts`** — lógica de animação (GSAP), sempre exposta como um hook (`use<Nome>...`) que recebe refs e não devolve nada. Só existe se o componente anima algo.
+- **`<Nome>.styles.ts`** — classes Tailwind extraídas quando há variantes ou blocos de classe reaproveitados (ex.: `Button.styles.ts` com as classes por variante).
+- **`<Nome>.constants.ts`** — valores estáticos usados no componente (ex.: o `d` do path do `VoltTrace`).
+- **`<Nome>.utils.ts` / `<Nome>.hooks.ts`** — funções auxiliares ou hooks que não são de animação (ex.: `NavLink.hooks.ts` com `useIsActiveRoute`).
+
+Exemplo real (`VoltTrace`, o traço de circuito animado da hero):
+
+```
+VoltTrace/
+├── index.tsx                 # o <svg>, sem lógica de animação
+├── VoltTrace.types.ts        # VoltTraceProps
+├── VoltTrace.constants.ts    # TRACE_PATH, DOT_POSITIONS
+└── VoltTrace.animations.ts   # useVoltTraceAnimation(refs) — toda a timeline GSAP
+```
+
+Um componente sem props e sem animação (ex.: `Footer`, `Process`) tem só o `index.tsx` — não crie arquivos vazios "por padrão".
 
 Para editar textos (serviços, artigos, FAQ, dados da empresa, perfil do diretor), o único arquivo que precisa ser tocado na maioria dos casos é `src/lib/content.ts`.
 
