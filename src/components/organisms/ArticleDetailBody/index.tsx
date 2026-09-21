@@ -24,10 +24,6 @@ export function ArticleDetailBody({ article }: ArticleDetailBodyProps) {
 
           <div className="mt-8 flex items-center gap-4">
             <Badge>{article.category}</Badge>
-            <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-              {formatDate(article.date, { day: "2-digit", month: "long", year: "numeric" })} ·{" "}
-              {article.readingTime} de leitura
-            </span>
           </div>
 
           <h1 ref={titleRef} className="mt-6 font-display text-4xl font-semibold uppercase leading-[1.05] tracking-tight text-foam md:text-5xl">
