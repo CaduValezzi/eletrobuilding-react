@@ -399,7 +399,7 @@ export const director = {
 
 export const contactPage = {
   eyebrow: "Fale com a Eletro Building",
-  title: "Tem um projeto elétrico? Vamos falar sobre a instalação",
+  title: "Tem um projeto? Vamos falar sobre",
   description:
     "Preencha o formulário com os dados do seu projeto. Nossa equipe analisa os requisitos e retorna com uma resposta técnica qualificada, sem compromisso.",
 };
