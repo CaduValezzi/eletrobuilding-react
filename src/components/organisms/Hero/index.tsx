@@ -17,7 +17,7 @@ export function Hero() {
 
   return (
     <section id="top" className="relative overflow-hidden bg-graphite-950">
-      <div className="relative min-h-[640px] w-full md:min-h-[760px]">
+      <div className="relative min-h-[640px] w-full md:min-h-[760px] h-screen">
         <Image
           src="/images/electricity.webp"
           alt="Torres de transmissão de energia elétrica contra o céu"
@@ -78,7 +78,7 @@ export function Hero() {
 
       <div className="container-edge">
         <div className="hairline border-t-0 border-x-0 border-b py-6">
-          <p className="font-mono text-xs uppercase tracking-[0.1em] text-muted md:text-sm">
+          <p className="font-mono text-xs uppercase tracking-[0.1em] text-muted md:text-sm text-center">
             {hero.stripText}
           </p>
         </div>

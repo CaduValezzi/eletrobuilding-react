@@ -11,12 +11,12 @@ export function ServicesTeaser() {
         <div className="mb-14 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <Eyebrow className="mb-5 block">Nossos Serviços</Eyebrow>
-            <SectionHeading className="max-w-2xl">
-              Engenharia elétrica entregue com responsabilidade técnica
+            <SectionHeading className="max-w-xl">
+              Engenharia entregue com responsabilidade
             </SectionHeading>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted">
-            Da vistoria à energização, cada serviço é executado por equipe própria e documentado
+            Da vistoria à entrega, cada serviço é executado por uma equipe e documentado
             do início ao fim.
           </p>
         </div>
