@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { articles, getArticleBySlug } from "@/lib/content";
+import { articles, getArticleBySlug } from "@/constants/articles";
 import { ArtigoDetalheTemplate } from "@/components/templates/ArtigoDetalheTemplate";
 
 type ArtigoPageProps = {

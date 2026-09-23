@@ -1,4 +1,4 @@
-import { articles } from "@/lib/content";
+import { articles } from "@/constants/articles";
 import { Eyebrow } from "@/components/atoms/Eyebrow";
 import { SectionHeading } from "@/components/atoms/SectionHeading";
 import { ArticleCard } from "@/components/molecules/ArticleCard";

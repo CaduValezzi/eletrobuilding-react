@@ -1,4 +1,4 @@
-import { articles } from "@/lib/content";
+import { articles } from "@/constants/articles";
 import { ArticleCard } from "@/components/molecules/ArticleCard";
 
 export function ArticlesListing() {

@@ -1,4 +1,4 @@
-import type { Article } from "@/lib/content";
+import type { Article } from "@/constants/articles";
 
 export type ArtigoDetalheTemplateProps = {
   article: Article;

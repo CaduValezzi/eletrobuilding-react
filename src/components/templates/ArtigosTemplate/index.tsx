@@ -3,7 +3,7 @@ import { PageHero } from "@/components/organisms/PageHero";
 import { ArticlesListing } from "@/components/organisms/ArticlesListing";
 import { CtaBanner } from "@/components/organisms/CtaBanner";
 import { Footer } from "@/components/organisms/Footer";
-import { articlesPage } from "@/lib/content";
+import { articlesPage } from "@/constants/articlesPage";
 
 export function ArtigosTemplate() {
   return (

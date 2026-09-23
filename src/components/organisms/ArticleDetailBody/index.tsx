@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import { articles } from "@/lib/content";
+import { articles } from "@/constants/articles";
 import { BackLink } from "@/components/atoms/BackLink";
 import { Badge } from "@/components/atoms/Badge";
 import { ArticleCard } from "@/components/molecules/ArticleCard";
