@@ -11,9 +11,9 @@ export function Header() {
       <div className="container-edge flex h-20 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-3">
           <Image src="/images/logo.webp" alt="Eletro Building" width={40} height={24} className="h-8 w-auto" priority />
-          <span className="font-display text-xl font-semibold uppercase tracking-tight text-foam">
+          {/* <span className="font-display text-xl font-semibold uppercase tracking-tight text-foam">
             Eletro<span className="text-volt-dim">Building</span>
-          </span>
+          </span> */}
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

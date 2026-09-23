@@ -26,7 +26,7 @@ export function Footer() {
           <Button href="/contato">Solicitar orçamento</Button>
         </div>
 
-        <div className="grid grid-cols-2 gap-10 py-14 md:grid-cols-4">
+        <div className="grid text-center grid-cols-1 gap-10 py-14 md:grid-cols-2 md:text-left lg:grid-cols-4 ">
           <FooterColumn
             title="Navegação"
             items={nav.map((n) => ({ label: n.label, href: n.href }))}
