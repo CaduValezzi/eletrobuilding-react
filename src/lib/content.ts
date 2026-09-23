@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Engenharia Elétrica & Segurança",
   email: "contato@eletrobuilding.com.br",
   phone: "+55 (11) 1149914110",
-  phoneHref: "tel:+551149914110",
+  phoneHref: "https://wa.me/551149914110",
   whatsapp: "https://wa.me/551149914110",
   address: "Santo André — SP, Brasil",
 };
